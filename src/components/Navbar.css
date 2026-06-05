@@ -1,0 +1,324 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2.4rem 3.2rem; /* Added top padding */
+  transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  justify-content: center;
+}
+
+/* At top — fully transparent, merges with page */
+.navbar:not(.scrolled) {
+  background: transparent;
+}
+
+/* Scrolled — compact, pull padding in */
+.navbar.scrolled {
+  background: transparent;
+  padding: 1.6rem 2rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 140rem; /* Full width for normal state */
+  height: var(--nav-height);
+  gap: 3.2rem;
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, border-radius 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ── Scrolled: compact white frosted glass pill (matches Botika) ── */
+.navbar.scrolled .nav-container {
+  max-width: 102rem; /* Shrinks the pill width when scrolled */
+  height: 5.4rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 10rem;
+  padding: 0 2.4rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+/* ── Logo ── */
+.nav-logo-text {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.nav-logo-text svg {
+  flex-shrink: 0;
+}
+
+.logo-name {
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+}
+
+.nav-logo-desktop { display: flex; }
+.nav-logo-mobile  { display: none; }
+
+/* When scrolled, logo stays dark (frosted white bg) */
+.navbar.scrolled .nav-logo-text {
+  color: var(--black);
+}
+
+/* ── Left group (logo + links) ── */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  flex: 1;
+}
+
+/* ── Nav links ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black);
+  transition: opacity 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.nav-link:hover { opacity: 0.6; }
+
+/* Links stay dark on frosted white pill */
+.navbar.scrolled .nav-link {
+  color: var(--black);
+}
+
+/* ── Dropdown ── */
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-toggle svg {
+  transition: transform 0.3s ease;
+}
+.nav-dropdown.active .nav-dropdown-toggle svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.22s ease;
+  z-index: 100;
+}
+
+.nav-dropdown.active .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-content {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 20rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav-dropdown-link {
+  display: block;
+  padding: 0.9rem 1.4rem;
+  font-size: 1.4rem;
+  color: var(--black);
+  border-radius: 0.6rem;
+  transition: background 0.2s ease;
+}
+
+.nav-dropdown-link:hover { background: var(--gray-lighter); }
+
+/* ── Right CTA ── */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.nav-link.contact-link {
+  color: var(--black);
+}
+.navbar.scrolled .nav-link.contact-link {
+  color: var(--white);
+}
+
+.nav-btn {
+  padding: 1rem 2rem !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  border-radius: 0.6rem !important;
+  background: var(--black) !important;
+  color: var(--white) !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.nav-btn:hover {
+  opacity: 0.85 !important;
+}
+
+/* Scrolled: button stays dark (matches Botika) */
+.navbar.scrolled .nav-btn {
+  background: var(--black) !important;
+  color: var(--white) !important;
+}
+
+/* Scrolled: Contact Us stays dark */
+.navbar.scrolled .contact-link {
+  color: var(--black) !important;
+}
+
+.desktop-only { display: flex; }
+
+/* desktop CTA always visible, mobile CTA only inside drawer */
+.desktop-cta { display: flex; align-items: center; gap: 0.8rem; flex-shrink: 0; }
+.mobile-cta  { display: none; }
+
+/* ── Burger ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.nav-burger span {
+  width: 2rem;
+  height: 2px;
+  background: var(--black);
+  transition: var(--transition);
+  border-radius: 1px;
+}
+
+.nav-burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ═══ MOBILE ═══ */
+@media (max-width: 991px) {
+  .navbar { padding: 0 2rem; }
+
+  .nav-logo-desktop { display: none; }
+  .nav-logo-mobile  { display: flex; }
+  .nav-burger       { display: flex; }
+  .desktop-only     { display: none; }
+  .desktop-cta      { display: none; }
+  .mobile-cta       { display: flex; flex-direction: column; width: 100%; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-light); }
+
+  .nav-left {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 40rem;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8rem 3rem 3rem;
+    background: var(--white);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.4s ease;
+    overflow-y: auto;
+    border-radius: 0;
+  }
+
+  .nav-left.open { right: 0; }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-dropdown { width: 100%; }
+
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    padding: 1.4rem 0;
+    font-size: 1.6rem;
+    width: 100%;
+    color: var(--black) !important;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    padding-top: 0;
+    display: none;
+  }
+
+  .nav-dropdown.active .nav-dropdown-menu { display: block; }
+
+  .nav-dropdown-content {
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 1.6rem;
+    min-width: auto;
+  }
+
+  .nav-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-light);
+    gap: 1.2rem;
+  }
+
+  .nav-btn {
+    width: 100% !important;
+    justify-content: center;
+    border-radius: 0.6rem !important;
+  }
+
+  /* On mobile, nav-container has no pill background */
+  .navbar.scrolled .nav-container {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,151 @@
+/* ===== APP GLOBAL STYLES ===== */
+
+/* Hero wrapper - white bg with dark trusted-by bar */
+.hero-wrapper {
+  background: var(--white);
+}
+
+/* Section spacing */
+main > section {
+  position: relative;
+}
+
+/* Smooth reveal animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Button styles matching Botika */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.4rem 2.8rem;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-primary.dark:hover {
+  background: var(--black-light);
+}
+
+.btn-primary.outline {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--gray-light);
+}
+
+.btn-primary.outline:hover {
+  background: var(--gray-lighter);
+}
+
+.btn-primary.white {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-primary.white:hover {
+  background: var(--gray-lighter);
+}
+
+.btn-arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Underline link button */
+.btn-underline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--black);
+  position: relative;
+  transition: var(--transition);
+}
+
+.btn-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.4s ease;
+}
+
+.btn-underline:hover::after {
+  width: 100%;
+}
+
+.btn-underline svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-underline:hover svg {
+  transform: translateX(3px);
+}
+
+/* Buttons container */
+.buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Section title pattern */
+.section-title-center {
+  text-align: center;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.section-title-center h2 {
+  margin-bottom: 1.6rem;
+}
+
+.section-title-center p {
+  color: var(--gray-dark);
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .btn-primary {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.3rem;
+  }
+}
