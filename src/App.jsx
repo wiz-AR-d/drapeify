@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import ContactUs from './pages/ContactUs'
+import ModelsGallery from './pages/ModelsGallery'
 import './App.css'
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/models" element={<ModelsGallery />} />
       </Routes>
       <Footer />
     </>

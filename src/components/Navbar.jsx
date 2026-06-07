@@ -63,7 +63,7 @@ export default function Navbar() {
   }
 
   const getHref = (item) => {
-    if (item === 'Model Gallery') return '#model-gallery'
+    if (item === 'Model Gallery') return '/models'
     return '#'
   }
 
@@ -72,16 +72,16 @@ export default function Navbar() {
       <div className="nav-container">
 
         {/* Mobile logo */}
-        <a href="/" className="nav-logo-mobile">
+        <Link to="/" className="nav-logo-mobile">
           <DrapeifyLogo />
-        </a>
+        </Link>
 
         {/* Left: Logo + Links (becomes mobile drawer) */}
         <div className={`nav-left ${mobileOpen ? 'open' : ''}`}>
 
-          <a href="/" className="nav-logo-desktop">
+          <Link to="/" className="nav-logo-desktop">
             <DrapeifyLogo />
-          </a>
+          </Link>
 
           <div className="nav-links">
             {Object.entries(dropdowns).map(([name, items]) => (
@@ -100,17 +100,18 @@ export default function Navbar() {
                 <div className="nav-dropdown-menu">
                   <div className="nav-dropdown-content">
                     {items.map(item => (
-                      <a 
+                      <Link 
                         key={item} 
-                        href={getHref(item)} 
+                        to={getHref(item)} 
                         className="nav-dropdown-link"
                         onClick={() => {
                           setMobileOpen(false)
                           setActiveDropdown(null)
+                          window.scrollTo(0, 0)
                         }}
                       >
                         {item}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
