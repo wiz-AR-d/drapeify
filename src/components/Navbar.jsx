@@ -58,12 +58,13 @@ export default function Navbar() {
   }, [])
 
   const dropdowns = {
-    Product:   ['Model Gallery'],
+    Product:   ['On Model', 'Model Gallery'],
     Solutions: ['Cut production costs', 'Get to market faster', 'Create editorials', 'Increase diversity'],
   }
 
   const getHref = (item) => {
     if (item === 'Model Gallery') return '#model-gallery'
+    if (item === 'On Model') return '/products/on-model'
     return '#'
   }
 
@@ -99,19 +100,41 @@ export default function Navbar() {
                 </button>
                 <div className="nav-dropdown-menu">
                   <div className="nav-dropdown-content">
-                    {items.map(item => (
-                      <a 
-                        key={item} 
-                        href={getHref(item)} 
-                        className="nav-dropdown-link"
-                        onClick={() => {
-                          setMobileOpen(false)
-                          setActiveDropdown(null)
-                        }}
-                      >
-                        {item}
-                      </a>
-                    ))}
+                    {items.map(item => {
+                      const href = getHref(item)
+                      const isInternal = href.startsWith('/')
+                      const onClickHandler = () => {
+                        setMobileOpen(false)
+                        setActiveDropdown(null)
+                        if (isInternal) {
+                          window.scrollTo(0, 0)
+                        }
+                      }
+
+                      if (isInternal) {
+                        return (
+                          <Link 
+                            key={item} 
+                            to={href} 
+                            className="nav-dropdown-link"
+                            onClick={onClickHandler}
+                          >
+                            {item}
+                          </Link>
+                        )
+                      }
+
+                      return (
+                        <a 
+                          key={item} 
+                          href={href} 
+                          className="nav-dropdown-link"
+                          onClick={onClickHandler}
+                        >
+                          {item}
+                        </a>
+                      )
+                    })}
                   </div>
                 </div>
               </div>
