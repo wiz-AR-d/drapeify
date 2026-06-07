@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './BrandSlider.css'
 
 const brandSlides = [
@@ -23,7 +24,7 @@ export default function BrandSlider() {
   }
 
   return (
-    <section className="brand-slider-section">
+    <section id="model-gallery" className="brand-slider-section">
       <div className="container">
         <div className="brand-slider-header">
           <h2 className="brand-slider-h2">Real brands, real results.</h2>
@@ -31,8 +32,8 @@ export default function BrandSlider() {
             See how AI-generated models for fashion make a difference.
           </p>
           <div className="buttons-row" style={{ justifyContent: 'center' }}>
-            <a href="#" className="btn-primary dark">Get Started</a>
-            <a href="#" className="btn-primary outline">Book a Call</a>
+            <Link to="/contact" className="btn-primary dark">Get Started</Link>
+            <Link to="/contact" className="btn-primary outline">Book a Call</Link>
           </div>
         </div>
 

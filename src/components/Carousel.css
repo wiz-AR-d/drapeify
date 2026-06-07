@@ -1,13 +1,17 @@
-/* ===== CAROUSEL SECTION ===== */
+/* ===== CAROUSEL SECTION — Card Stacking Scroll ===== */
 .carousel-section {
-  padding: 9.6rem 0 7rem;
+  padding: 9.6rem 0 4rem;
   position: relative;
   background: var(--white);
 }
 
 .carousel-title-container {
+  position: sticky;
+  top: 120px; /* Locks below the navbar */
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
+  z-index: 50; /* Ensure it stays above cards */
+  pointer-events: auto;
 }
 
 .carousel-h2 {
@@ -22,38 +26,46 @@
   border-color: var(--gray-light) !important;
 }
 
-.carousel-main {
-  position: relative;
+/* ── Stack container ── */
+.carousel-stack {
+  display: flex;
+  flex-direction: column;
   max-width: 90rem;
   margin: 0 auto;
-  aspect-ratio: 866 / 450;
-  border-radius: 1.2rem;
+}
+
+/* ── Individual card — all stick at the same top ── */
+.carousel-card {
+  position: sticky;
+  top: 340px; /* Sticks safely below the locked title and button */
+  z-index: calc(10 + var(--card-index, 0));
+  margin-bottom: 150px; /* Gap to allow scroll-over effect */
+}
+
+.carousel-card:last-child {
+  margin-bottom: 150px; /* Small pause so card fully sticks and covers the previous one, then next section appears */
+}
+
+.carousel-card-inner {
+  position: relative;
+  border-radius: 0.8rem; /* Subtle rounding */
   overflow: hidden;
   background: var(--gray-lighter);
+  aspect-ratio: 866 / 450;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  will-change: transform, opacity;
+  transform-origin: center top;
 }
 
-.carousel-image-area {
-  position: absolute;
-  inset: 0;
-}
-
-.carousel-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-}
-
-.carousel-slide img {
+.carousel-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top; /* Anchors the image to the top so the models' heads don't get cut off */
+  display: block;
 }
 
+/* ── Labels overlay on each card ── */
 .carousel-labels {
   position: absolute;
   right: 4rem;
@@ -71,10 +83,7 @@
   color: rgba(0,0,0,0.25);
   text-align: right;
   padding: 0.4rem 0;
-  cursor: pointer;
-  transition: var(--transition);
-  background: none;
-  border: none;
+  transition: color 0.3s ease, font-weight 0.3s ease;
   font-family: inherit;
 }
 
@@ -83,22 +92,9 @@
   font-weight: 600;
 }
 
-.carousel-label:hover {
-  color: rgba(0,0,0,0.5);
-}
-
-.carousel-bg-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 15rem;
-  background: linear-gradient(to bottom, transparent, var(--gray-lighter));
-  pointer-events: none;
-}
-
+/* ═══ RESPONSIVE ═══ */
 @media (max-width: 1536px) and (min-width: 992px) {
-  .carousel-main {
+  .carousel-stack {
     max-width: 80rem;
   }
   .carousel-h2 {
@@ -108,21 +104,42 @@
 
 @media (max-width: 991px) {
   .carousel-section {
-    padding: 6.4rem 0 4rem;
+    padding: 6.4rem 0 2rem;
   }
   .carousel-h2 {
     font-size: 2.8rem;
     padding: 0 2rem;
   }
-  .carousel-main {
+
+  .carousel-title-container {
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 4rem;
+  }
+
+  /* Disable sticky stacking on mobile */
+  .carousel-card {
+    position: relative;
+    top: auto !important;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-card-inner {
     aspect-ratio: 1 / 1;
     border-radius: 0.8rem;
   }
+
   .carousel-labels {
     right: 2rem;
     bottom: 2rem;
   }
+  
   .carousel-label {
     font-size: 2rem;
+  }
+
+  /* Only show the active label for the specific card on mobile */
+  .carousel-label:not(.active) {
+    display: none;
   }
 }

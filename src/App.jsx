@@ -1,31 +1,41 @@
+import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import Lenis from '@studio-freight/lenis'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import TrustedBy from './components/TrustedBy'
-import Carousel from './components/Carousel'
-import BrandSlider from './components/BrandSlider'
-import Benefits from './components/Benefits'
-import Quality from './components/Quality'
-import CreativePartner from './components/CreativePartner'
-import CTA from './components/CTA'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import ContactUs from './pages/ContactUs'
 import './App.css'
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 3.0, // Extremely slow, luxurious glide
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      smoothWheel: true,
+      wheelMultiplier: 0.7,
+      touchMultiplier: 1.5,
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    return () => {
+      lenis.destroy()
+    }
+  }, [])
+
   return (
     <>
       <Navbar />
-      <main>
-        <div className="hero-wrapper">
-          <Hero />
-          <TrustedBy />
-        </div>
-        <Carousel />
-        <BrandSlider />
-        <Benefits />
-        <Quality />
-        <CreativePartner />
-        <CTA />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactUs />} />
+      </Routes>
       <Footer />
     </>
   )

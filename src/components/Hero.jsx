@@ -1,17 +1,26 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const heroImages = [
-    '/images/hero_model.png',           // European — pink sweater girl
-    '/images/hero_indian_kurta.png',     // Indian — chikankari kurta
-    '/images/hero_model_3.png',          // European — denim jacket
-    '/images/hero_indian_saree.png',     // Indian — blue silk saree
-    '/images/hero_model_4.png',          // European — striped jersey guy
-    '/images/hero_indian_casual.png',    // Indian — linen kurta guy
-    '/images/hero_model_2.png',          // African — pink sweatshirt
+    // '/images/hero_model.jpeg',
+
+    '/images/ok3.png',           // European — denim jacket
+
+    // '/images/saree_wedding_model.png',   // Indian — zoomed in saree with wedding bg
+    '/images/hh1.png',
+    // Indian — linen kurta guy
+    '/images/ok.png',           // European — pink sweater girl
+    '/images/hero_crop_71.png',
+    '/images/ok1.png',
+
+    '/images/ok5.png',           // European — striped jersey guy
+
+    // African — pink sweatshirt
+
   ]
 
   useEffect(() => {
@@ -34,12 +43,12 @@ export default function Hero() {
               Drapeify helps leading brands create authentic, on-brand imagery at scale, giving teams creative freedom, consistency and full control.
             </p>
             <div className="buttons-row">
-              <a href="#" className="btn-primary dark" id="header_getstarted">
+              <Link to="/contact" className="btn-primary dark" id="header_getstarted">
                 Get Started
-              </a>
-              <a href="#" className="btn-primary outline" id="header_bookacall">
+              </Link>
+              <Link to="/contact" className="btn-primary outline" id="header_bookacall">
                 Book a Call
-              </a>
+              </Link>
             </div>
           </div>
         </div>

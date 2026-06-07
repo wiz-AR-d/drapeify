@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './CTA.css'
 
 export default function CTA() {
@@ -9,10 +10,10 @@ export default function CTA() {
             Transform photoshoots and get flawless results in no time
           </h2>
           <div className="buttons-row" style={{ justifyContent: 'center' }}>
-            <a href="#" className="btn-primary white">Get Started</a>
-            <a href="#" className="btn-primary outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>
+            <Link to="/contact" className="btn-primary dark">Get Started</Link>
+            <Link to="/contact" className="btn-primary" style={{ background: '#e0e0e0', color: '#1a1a1a', border: 'none' }}>
               Book a Call
-            </a>
+            </Link>
           </div>
         </div>
       </div>

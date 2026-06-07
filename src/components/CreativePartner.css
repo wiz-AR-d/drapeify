@@ -1,63 +1,101 @@
 /* ===== CREATIVE PARTNER ===== */
 .partner-section {
-  padding: 9.6rem 0;
-  background: var(--white);
+  position: relative;
+  background: var(--black);
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.partner-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25rem;
+  background: linear-gradient(to bottom, transparent 0%, var(--gray-lighter) 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.partner-bg-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.partner-bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Overlay no longer needed globally since they are stacked ── */
+.partner-bg-overlay {
+  display: none;
+}
+
+.absolute-container {
+  position: relative;
+  padding: 8rem 0; /* Perfectly even top and bottom padding for vertical centering */
+  width: 100%;
 }
 
 .partner-content {
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-  max-width: 100rem;
-  margin: 0 auto;
+  max-width: 80rem;
 }
 
 .partner-text {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
 }
 
 .partner-h2 {
-  font-size: 4rem;
+  font-size: 5.6rem;
   font-weight: 500;
   letter-spacing: -0.04em;
-  margin-bottom: 1.6rem;
-  line-height: 1.15;
+  margin-bottom: 0;
+  line-height: 1.1;
+  color: var(--white);
+  text-align: left;
 }
 
 .partner-description {
-  font-size: 1.6rem;
-  color: var(--gray-dark);
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
-  margin-bottom: 3.2rem;
-  max-width: 42rem;
+  margin-bottom: 0;
+  max-width: 65rem;
+  text-align: left;
 }
 
-.partner-image {
-  flex: 1;
-  border-radius: 1.6rem;
-  overflow: hidden;
+.solid-white {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white) !important;
 }
 
-.partner-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 1.6rem;
-  transition: transform 0.6s ease;
-}
-
-.partner-image:hover img {
-  transform: scale(1.03);
+.solid-white:hover {
+  background: transparent;
+  color: var(--white);
 }
 
 @media (max-width: 1536px) and (min-width: 992px) {
-  .partner-h2 { font-size: 3.2rem; }
+  .partner-h2 { font-size: 4.8rem; }
+  .partner-description { font-size: 1.8rem; }
 }
 
 @media (max-width: 991px) {
-  .partner-section { padding: 6.4rem 0; }
-  .partner-content {
-    flex-direction: column;
-    gap: 3.2rem;
+  .absolute-container {
+    padding: 6.4rem 2rem;
   }
-  .partner-h2 { font-size: 2.8rem; }
+
+  .partner-h2 { 
+    font-size: 3.6rem; 
+  }
+  
+  .partner-description { 
+    font-size: 1.8rem; 
+  }
 }

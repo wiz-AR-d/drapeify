@@ -8,7 +8,6 @@ const DrapeifyLogo = () => (
     <span>DRAPEIFY</span>
   </div>
 )
-
 export default function Footer() {
   return (
     <footer className="footer">

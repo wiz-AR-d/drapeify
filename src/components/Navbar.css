@@ -94,8 +94,8 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.8rem 1.4rem;
-  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.55rem;
   font-weight: 400;
   color: var(--black);
   transition: opacity 0.2s ease, color 0.3s ease;
@@ -104,9 +104,18 @@
   background: none;
   font-family: inherit;
   white-space: nowrap;
+  position: relative;
+  text-decoration: none;
 }
 
 .nav-link:hover { opacity: 0.6; }
+
+/* Underline on active dropdown trigger (no arrow) */
+.nav-dropdown.active > .nav-dropdown-toggle {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  opacity: 1;
+}
 
 /* Links stay dark on frosted white pill */
 .navbar.scrolled .nav-link {
@@ -141,24 +150,29 @@
 }
 
 .nav-dropdown-content {
-  background: var(--white);
-  border-radius: 1rem;
-  padding: 1rem;
+  background: rgba(90, 90, 90, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 0.6rem;
+  padding: 0.8rem 0;
   min-width: 20rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .nav-dropdown-link {
   display: block;
-  padding: 0.9rem 1.4rem;
-  font-size: 1.4rem;
-  color: var(--black);
-  border-radius: 0.6rem;
-  transition: background 0.2s ease;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.88);
+  border-radius: 0;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.nav-dropdown-link:hover { background: var(--gray-lighter); }
+.nav-dropdown-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
 
 /* ── Right CTA ── */
 .nav-cta {
@@ -176,8 +190,8 @@
 }
 
 .nav-btn {
-  padding: 1rem 2rem !important;
-  font-size: 1.4rem !important;
+  padding: 1.1rem 2.2rem !important;
+  font-size: 1.5rem !important;
   font-weight: 500 !important;
   border-radius: 0.6rem !important;
   background: var(--black) !important;
