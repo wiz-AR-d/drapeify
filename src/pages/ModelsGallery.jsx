@@ -19,13 +19,17 @@ const womenModels = [
 ]
 
 const menModels = [
-  { name: 'Noah', image: '/images/hero_model.jpeg' },
-  { name: 'Liam', image: '/images/hero_crop_7.png' },
-  { name: 'Chloe', image: '/images/hero_crop_6.png' },
+  { name: 'Noah', image: '/images/ChatGPT Image Jun 6, 2026, 07_24_02 PM.png' },
+  { name: 'Liam', image: '/images/ChatGPT Image Jun 6, 2026, 07_42_34 PM.png' },
+
   { name: 'Jobu', image: '/images/hero_model_4.png' },
-  { name: 'Oliver', image: '/images/hero_indian_kurta.jpeg' },
-  { name: 'Elijah', image: '/images/hero_indian_saree.png' },
-  { name: 'James', image: '/images/hero_crop_71.png' }
+  { name: 'Oliver', image: '/images/ChatGPT Image Jun 6, 2026, 08_00_33 PM.png' },
+  { name: 'Chloe', image: '/images/hero_crop_6.png' },
+  { name: 'Elijah', image: '/images/ChatGPT Image Jun 6, 2026, 08_06_11 PM.png' },
+  { name: 'James', image: '/images/ChatGPT Image Jun 7, 2026, 01_18_02 AM.png' },
+  { name: 'Chloe', image: '/images/ChatGPT Image Jun 7, 2026, 01_29_59 AM.png' },
+  { name: 'Chloe', image: '/images/herobg.jpg' },
+  { name: 'Chloe', image: '/images/heroblue.jpg' }
 ]
 
 const faqs = [

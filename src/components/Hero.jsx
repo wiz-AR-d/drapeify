@@ -7,18 +7,19 @@ export default function Hero() {
 
   const heroImages = [
     // '/images/hero_model.jpeg',
-
+    '/images/cropped2.png',
     '/images/ok3.png',           // European — denim jacket
 
     // '/images/saree_wedding_model.png',   // Indian — zoomed in saree with wedding bg
-    '/images/hh1.png',
+    '/images/cropped3.png',
     // Indian — linen kurta guy
     '/images/ok.png',           // European — pink sweater girl
     '/images/hero_crop_71.png',
     '/images/ok1.png',
 
-    '/images/ok5.png',           // European — striped jersey guy
-
+    '/images/ok5.png',
+    // European — striped jersey guy
+    // '/images/hh1.png'
     // African — pink sweatshirt
 
   ]
