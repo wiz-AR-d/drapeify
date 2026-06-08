@@ -1,0 +1,482 @@
+/* ===== SOLUTIONS - COST PRODUCTION COSTS CSS ===== */
+
+.solutions-page {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding-top: var(--nav-height);
+  overflow-x: hidden;
+}
+
+/* ── Hero Section ── */
+.sol-hero-s {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #fff;
+}
+
+.sol-hero-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.sol-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sol-tag {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: rgba(26, 26, 26, 0.06);
+  border-radius: 10rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.sol-hero-h1 {
+  font-size: 5.6rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 2.4rem;
+}
+
+.sol-hero-description {
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: #555;
+  margin-bottom: 3.6rem;
+  max-width: 46rem;
+  letter-spacing: -0.005em;
+}
+
+.sol-hero-btns-c {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.sol-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 10rem;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  transition: background 0.25s ease, transform 0.2s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sol-btn-primary:hover {
+  background: #333;
+}
+
+.sol-btn-primary.full-width {
+  width: 100%;
+  justify-content: center;
+}
+
+.sol-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #f0f0f3;
+  color: #1a1a1a;
+  border-radius: 10rem;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sol-btn-secondary:hover {
+  background: #e0e0e4;
+}
+
+.sol-hero-img-c {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: #f0f0f3;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.sol-hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Calculator Section ── */
+.sol-calculator-s {
+  padding: 10rem 0;
+  background-color: #fcfcfd;
+  border-top: 1px solid #f0f0f3;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.sol-calc-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.sol-calc-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-section-h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #111;
+  margin-bottom: 1.6rem;
+}
+
+.sol-section-h2.text-center {
+  text-align: center;
+}
+
+.sol-section-p {
+  font-size: 1.65rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+  max-width: 54rem;
+}
+
+.sol-section-p.max-w {
+  margin: 0 auto;
+}
+
+.sol-slider-group {
+  margin-bottom: 3.2rem;
+}
+
+.sol-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.sol-slider-header label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.sol-slider-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Range input styling */
+.sol-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e5e5;
+  outline: none;
+}
+
+.sol-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.sol-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Result Card */
+.sol-calc-result-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1.6rem;
+  padding: 3.6rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.sol-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sol-result-row.total {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sol-result-label {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.sol-result-row.total .sol-result-label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.sol-result-val {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sol-result-val.red { color: #e53e3e; }
+.sol-result-val.green { color: #2f855a; }
+
+.sol-result-val.savings {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2f855a;
+}
+
+.sol-result-divider {
+  height: 1px;
+  background: #e5e5e5;
+  width: 100%;
+}
+
+.sol-result-disclaimer {
+  font-size: 1.25rem;
+  color: #888;
+  line-height: 1.4;
+  margin-bottom: 2.4rem;
+}
+
+/* ── Benefits Section ── */
+.sol-benefits-s {
+  padding: 10rem 0;
+  background-color: #fff;
+}
+
+.sol-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.sol-benefit-card {
+  padding: 4rem 3rem;
+  border: 1px solid #f0f0f3;
+  border-radius: 1.6rem;
+  background: #fbfbfd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sol-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sol-benefit-metric {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.6rem;
+}
+
+.sol-benefit-h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #111;
+}
+
+.sol-benefit-p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ── Process / Steps Section ── */
+.sol-steps-s {
+  padding: 10rem 0;
+  background-color: #f5f5f7;
+}
+
+.sol-steps-title-c {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.sol-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.sol-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sol-step-number {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+.sol-step-h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+.sol-step-p {
+  font-size: 1.55rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+/* ── FAQ Section ── */
+.sol-faq-s {
+  padding: 10rem 0;
+  background: #fff;
+  border-top: 1px solid #f0f0f3;
+}
+
+.sol-faq-container {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.sol-faq-list {
+  margin-top: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.sol-faq-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sol-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sol-faq-icon {
+  transition: transform 0.3s ease;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.sol-faq-item.open .sol-faq-icon {
+  transform: rotate(180deg);
+}
+
+.sol-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.sol-faq-item.open .sol-faq-answer {
+  max-height: 20rem; /* safe threshold */
+}
+
+.sol-faq-answer p {
+  padding-bottom: 2rem;
+  font-size: 1.55rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .sol-hero-c {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    text-align: center;
+  }
+
+  .sol-hero-content {
+    align-items: center;
+  }
+
+  .sol-hero-img-c {
+    max-width: 52rem;
+    margin: 0 auto;
+  }
+
+  .sol-calc-container {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  .sol-calc-info {
+    text-align: center;
+  }
+
+  .sol-section-p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sol-benefits-grid,
+  .sol-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .sol-benefit-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sol-hero-h1 {
+    font-size: 3.8rem;
+  }
+  .sol-section-h2 {
+    font-size: 3rem;
+  }
+}

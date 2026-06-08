@@ -1,0 +1,436 @@
+.fl-page {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding-top: var(--nav-height);
+  overflow-x: hidden;
+}
+
+/* ===========================
+   1. HERO SECTION
+=========================== */
+.fl-hero-s {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #fff;
+}
+
+.fl-hero-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.fl-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fl-hero-h1 {
+  font-size: 5.6rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 2.4rem;
+}
+
+.fl-hero-description {
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: #555;
+  margin-bottom: 3.6rem;
+  max-width: 44rem;
+  letter-spacing: -0.005em;
+}
+
+.fl-hero-btns-c {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.fl-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 10rem;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+  text-decoration: none;
+}
+
+.fl-btn-primary:hover {
+  background: #333;
+}
+
+.fl-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #f0f0f3;
+  color: #1a1a1a;
+  border-radius: 10rem;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+  text-decoration: none;
+}
+
+.fl-btn-secondary:hover {
+  background: #e0e0e4;
+}
+
+/* Hero Image Grid */
+.fl-hero-img-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.fl-hero-grid-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.fl-hero-grid-left-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  background: #e8eef5;
+}
+
+.fl-hero-grid-right {
+  width: 100%;
+  height: 100%;
+}
+
+.fl-hero-grid-right-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  background: #e8eef5;
+}
+
+
+/* ===========================
+   2. STEPS SECTION
+=========================== */
+.fl-steps-s {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  background-color: #f5f5f5;
+}
+
+.fl-steps-c {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.fl-steps-title-c {
+  text-align: center;
+  max-width: 76rem;
+  margin: 0 auto 10rem auto;
+}
+
+.fl-steps-h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+}
+
+.fl-steps-description {
+  font-size: 1.7rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+.fl-steps-description.product {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+/* Alternating Steps Grid */
+.fl-steps-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0;
+}
+
+/* Dashed center vertical line */
+.fl-steps-grid-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  transform: translateX(-50%);
+  background-image: url("data:image/svg+xml,%3csvg width='1' height='8' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0.5' y1='0' x2='0.5' y2='9' stroke='%23272523' stroke-opacity='0.4' stroke-dasharray='4 4'/%3e%3c/svg%3e");
+  background-repeat: repeat-y;
+  background-position: left center;
+  background-size: 1px 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Moving ball on the line */
+.fl-steps-item-ball {
+  position: absolute;
+  left: 50%;
+  top: 16%;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #1a1a1a;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  border: 3px solid #f5f5f5;
+  box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+/* Each alternating step row */
+.fl-steps-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  padding: 8rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+  z-index: 2;
+}
+
+.fl-steps-item:last-of-type {
+  border-bottom: none;
+}
+
+/* Reverse: content on right, image on left */
+.fl-steps-item.reverse {
+  direction: rtl;
+}
+
+.fl-steps-item.reverse > * {
+  direction: ltr;
+}
+
+.fl-steps-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fl-steps-item-count {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.fl-steps-item-h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.fl-steps-item-text {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.5;
+  max-width: 44rem;
+}
+
+/* Step image container */
+.fl-steps-img-c {
+  border-radius: 1.6rem;
+  overflow: hidden;
+  background: #fff;
+  aspect-ratio: 1.4;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  width: 100%;
+  height: 100%;
+}
+
+.fl-steps-img-c img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===========================
+   3. RESULT SECTION
+=========================== */
+.fl-steps-results {
+  margin-top: 12rem;
+}
+
+.fl-steps-results-title {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.fl-tag {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: rgba(26, 26, 26, 0.06);
+  border-radius: 10rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* 3 tilted overlapping result cards */
+.fl-steps-results-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  min-height: 48rem;
+  position: relative;
+}
+
+.fl-steps-results-grid-img-c {
+  width: 30%;
+  aspect-ratio: 0.7;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.fl-steps-results-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.fl-steps-results-grid-img-c:hover .fl-steps-results-grid-img {
+  transform: scale(1.04);
+}
+
+/* Left card: tilted left */
+.fl-steps-results-grid-img-c.left {
+  transform: rotate(-10deg) translate(-28rem, 2rem);
+  z-index: 1;
+}
+
+/* Center card: upright, front and center */
+.fl-steps-results-grid-img-c.center {
+  transform: translateY(-2rem);
+  z-index: 3;
+  box-shadow: 0 30px 65px rgba(0,0,0,0.18);
+}
+
+/* Right card: tilted right */
+.fl-steps-results-grid-img-c.right {
+  transform: rotate(10deg) translate(28rem, 2rem);
+  z-index: 2;
+}
+
+.fl-steps-results-grid-img-c:hover {
+  z-index: 10;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.24);
+}
+
+.fl-steps-results-grid-img-c.left:hover {
+  transform: rotate(-10deg) translate(-28rem, 2rem) scale(1.07);
+}
+
+.fl-steps-results-grid-img-c.center:hover {
+  transform: translateY(-4rem) scale(1.05);
+}
+
+.fl-steps-results-grid-img-c.right:hover {
+  transform: rotate(10deg) translate(28rem, 2rem) scale(1.07);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+  .fl-hero-c {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    text-align: center;
+  }
+
+  .fl-hero-content {
+    align-items: center;
+  }
+
+  .fl-hero-img-c {
+    max-width: 52rem;
+    margin: 0 auto;
+  }
+
+  .fl-steps-item {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 6rem 0;
+    direction: ltr;
+  }
+
+  .fl-steps-item.reverse {
+    direction: ltr;
+  }
+
+  .fl-steps-grid-line,
+  .fl-steps-item-ball {
+    display: none;
+  }
+
+  .fl-steps-results-grid {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+
+  .fl-steps-results-grid-img-c {
+    position: relative;
+    width: 100%;
+    max-width: 36rem;
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  .fl-steps-results-grid-img-c:hover {
+    transform: translateY(-1rem) scale(1.02) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .fl-hero-h1 {
+    font-size: 3.8rem;
+  }
+  .fl-steps-h2 {
+    font-size: 3.4rem;
+  }
+}

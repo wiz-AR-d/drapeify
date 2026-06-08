@@ -58,13 +58,19 @@ export default function Navbar() {
   }, [])
 
   const dropdowns = {
-    Product:   ['On Model', 'Model Gallery'],
-    Solutions: ['Cut production costs', 'Get to market faster', 'Create editorials', 'Increase diversity'],
+    Product:   ['On Model', 'Flat Lay', 'Mannequin', 'Model Gallery'],
+    Solutions: ['Cut production cost', 'Go to market faster', 'Create editorials', 'Increase diversity'],
   }
 
   const getHref = (item) => {
     if (item === 'Model Gallery') return '#model-gallery'
     if (item === 'On Model') return '/products/on-model'
+    if (item === 'Flat Lay') return '/products/flat-lay'
+    if (item === 'Mannequin') return '/products/mannequin'
+    if (item === 'Cut production cost') return '/solutions/cut-production-cost'
+    if (item === 'Go to market faster') return '/solutions/go-to-market-faster'
+    if (item === 'Create editorials') return '/solutions/create-editorials'
+    if (item === 'Increase diversity') return '/solutions/increase-diversity'
     return '#'
   }
 

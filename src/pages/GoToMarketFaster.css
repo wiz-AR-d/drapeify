@@ -1,0 +1,427 @@
+/* ===== SOLUTIONS - GO TO MARKET FASTER CSS ===== */
+
+.solutions-page {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding-top: var(--nav-height);
+  overflow-x: hidden;
+}
+
+/* ── Hero Section ── */
+.sol-hero-s {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #fff;
+}
+
+.sol-hero-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.sol-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sol-tag {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: rgba(26, 26, 26, 0.06);
+  border-radius: 10rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.sol-hero-h1 {
+  font-size: 5.6rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 2.4rem;
+}
+
+.sol-hero-description {
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: #555;
+  margin-bottom: 3.6rem;
+  max-width: 46rem;
+  letter-spacing: -0.005em;
+}
+
+.sol-hero-btns-c {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.sol-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 10rem;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sol-btn-primary:hover {
+  background: #333;
+}
+
+.sol-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #f0f0f3;
+  color: #1a1a1a;
+  border-radius: 10rem;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sol-btn-secondary:hover {
+  background: #e0e0e4;
+}
+
+.sol-hero-img-c {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: #fdf5ea;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.sol-hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Speed Stats Banner ── */
+.sol-speed-stats-s {
+  padding: 6rem 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.sol-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  text-align: center;
+}
+
+.sol-stat-val {
+  font-size: 4.8rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.8rem;
+}
+
+.sol-stat-lbl {
+  font-size: 1.4rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Timeline Section ── */
+.sol-timeline-s {
+  padding: 10rem 0;
+  background-color: #fbfbfd;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.sol-timeline-intro {
+  margin-bottom: 8rem;
+}
+
+.sol-section-h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #111;
+  margin-bottom: 1.6rem;
+}
+
+.sol-section-h2.text-center {
+  text-align: center;
+}
+
+.sol-section-p {
+  font-size: 1.65rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+
+.sol-section-p.text-center {
+  text-align: center;
+}
+
+.sol-section-p.max-w {
+  margin: 0 auto;
+  max-width: 54rem;
+}
+
+.sol-timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.sol-track-col {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2rem;
+  padding: 4rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.sol-track-col.drape {
+  border-color: #1a1a1a;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.sol-track-h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3.6rem;
+  color: #111;
+  letter-spacing: -0.02em;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.sol-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.sol-timeline-node {
+  display: flex;
+  gap: 2.4rem;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  background: #fbfbfd;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sol-timeline-node:hover,
+.sol-timeline-node.active {
+  background: #fff;
+  border-color: #e5e5e5;
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.sol-track-col.drape .sol-timeline-node:hover,
+.sol-track-col.drape .sol-timeline-node.active {
+  border-color: #1a1a1a;
+}
+
+.sol-timeline-badge {
+  flex-shrink: 0;
+  width: 9.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.sol-timeline-badge.premium {
+  background: rgba(47, 133, 90, 0.1);
+  color: #2f855a;
+}
+
+.sol-timeline-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sol-timeline-node-title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.sol-timeline-node-desc {
+  font-size: 1.45rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ── Speed Advantages Section ── */
+.sol-speed-cards-s {
+  padding: 10rem 0;
+  background-color: #fff;
+}
+
+.sol-speed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.sol-speed-card {
+  padding: 4rem;
+  border-radius: 1.6rem;
+  background: #fbfbfd;
+  border: 1px solid #f0f0f3;
+  transition: transform 0.3s ease;
+}
+
+.sol-speed-card:hover {
+  transform: translateY(-5px);
+}
+
+.sol-speed-h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  color: #111;
+  letter-spacing: -0.02em;
+}
+
+.sol-speed-p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+/* ── FAQ Section ── */
+.sol-faq-s {
+  padding: 10rem 0;
+  background: #fff;
+  border-top: 1px solid #f0f0f3;
+}
+
+.sol-faq-container {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.sol-faq-list {
+  margin-top: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.sol-faq-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sol-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sol-faq-icon {
+  transition: transform 0.3s ease;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.sol-faq-item.open .sol-faq-icon {
+  transform: rotate(180deg);
+}
+
+.sol-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.sol-faq-item.open .sol-faq-answer {
+  max-height: 20rem;
+}
+
+.sol-faq-answer p {
+  padding-bottom: 2rem;
+  font-size: 1.55rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .sol-hero-c {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    text-align: center;
+  }
+
+  .sol-hero-content {
+    align-items: center;
+  }
+
+  .sol-hero-img-c {
+    max-width: 52rem;
+    margin: 0 auto;
+  }
+
+  .sol-stats-row {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .sol-timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  .sol-speed-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sol-hero-h1 {
+    font-size: 3.8rem;
+  }
+  .sol-section-h2 {
+    font-size: 3rem;
+  }
+}
