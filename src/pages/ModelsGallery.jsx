@@ -3,21 +3,26 @@ import { Link } from 'react-router-dom'
 import './ModelsGallery.css'
 
 const womenModels = [
-  { name: 'Adrian', image: '/images/hero_model_2.png' },
-  { name: 'Theo', image: '/images/hero_model_3.png' },
-  { name: 'Jobu', image: '/images/hero_model_4.png' },
-  { name: 'Tomas', image: '/images/hero_indian_casual.png' },
-  { name: 'Lucky', image: '/images/hero_crop_1.png' },
-  { name: 'Sophie', image: '/images/hero_crop_2.jpeg' },
   { name: 'Emma', image: '/images/hero_crop_3.png' },
-  { name: 'Lily', image: '/images/hero_crop_4.png' },
-  { name: 'Mia', image: '/images/hero_crop_5.png' },
-  { name: 'Chloe', image: '/images/hero_crop_6.png' }
+  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_14_44 PM.png' },
+  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_58_19 PM.png' },
+  // { name: 'Adrian', image: '/images/hero_model_2.png' },
+  { name: 'Lucky', image: '/images/hero_crop_7.png' },
+  { name: 'Sophie', image: '/images/hero_crop_2.jpeg' },
+  { name: 'Sophie', image: '/images/hero_model.jpeg' },
+  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_47_56 PM.png' },
+  { name: 'Mia', image: '/images/ChatGPT Image Jun 6, 2026, 06_16_40 PM.png' },
+  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_30_20 PM.png' },
+  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_34_57 PM.png' },
+
+
 ]
 
 const menModels = [
   { name: 'Noah', image: '/images/hero_model.jpeg' },
   { name: 'Liam', image: '/images/hero_crop_7.png' },
+  { name: 'Chloe', image: '/images/hero_crop_6.png' },
+  { name: 'Jobu', image: '/images/hero_model_4.png' },
   { name: 'Oliver', image: '/images/hero_indian_kurta.jpeg' },
   { name: 'Elijah', image: '/images/hero_indian_saree.png' },
   { name: 'James', image: '/images/hero_crop_71.png' }
@@ -47,13 +52,13 @@ export default function ModelsGallery() {
           </p>
 
           <div className="models-toggle">
-            <button 
+            <button
               className={`toggle-btn ${activeTab === 'Women' ? 'active' : ''}`}
               onClick={() => setActiveTab('Women')}
             >
               Women
             </button>
-            <button 
+            <button
               className={`toggle-btn ${activeTab === 'Men' ? 'active' : ''}`}
               onClick={() => setActiveTab('Men')}
             >
@@ -115,8 +120,8 @@ export default function ModelsGallery() {
             </div>
             <div className="faq-list">
               {faqs.map((faq, i) => (
-                <div 
-                  className={`faq-item ${openFaq === i ? 'open' : ''}`} 
+                <div
+                  className={`faq-item ${openFaq === i ? 'open' : ''}`}
                   key={i}
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
