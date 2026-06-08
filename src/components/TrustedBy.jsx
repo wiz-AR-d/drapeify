@@ -1,14 +1,11 @@
 import './TrustedBy.css'
 
 const logos = [
-  { name: 'JO+CO', style: { fontFamily: 'serif', fontSize: '2rem', letterSpacing: '0.05em' } },
-  { name: 'LOULOU', style: { fontFamily: 'serif', fontSize: '1.8rem', letterSpacing: '0.15em', fontWeight: 300 } },
-  { name: 'MEOTINE', style: { fontSize: '1.6rem', letterSpacing: '0.2em', fontWeight: 400 } },
-  { name: 'FOREVER 21', style: { fontSize: '2.2rem', letterSpacing: '0.05em', fontWeight: 800 } },
-  { name: 'PERRY ELLIS', style: { fontSize: '1.4rem', letterSpacing: '0.25em', fontWeight: 400 } },
-  { name: 'NIL+MON', style: { fontSize: '1.6rem', letterSpacing: '0.1em', fontWeight: 600 } },
-  { name: 'JORDACHE', style: { fontFamily: 'serif', fontSize: '1.6rem', letterSpacing: '0.08em', fontStyle: 'italic' } },
-  { name: 'HELIOT EMIL', style: { fontSize: '1.3rem', letterSpacing: '0.2em', fontWeight: 300 } },
+  { name: '99Shadesff', style: { fontFamily: 'serif', fontSize: '2rem', letterSpacing: '0.05em' } },
+  { name: 'Narie Sarees', style: { fontSize: '1.8rem', letterSpacing: '0.1em', fontWeight: 400 } },
+  { name: 'Swadeshi Videshi', style: { fontSize: '1.6rem', letterSpacing: '0.15em', fontWeight: 600 } },
+  { name: 'ThreadZ', style: { fontFamily: 'serif', fontSize: '2.2rem', letterSpacing: '0.05em', fontWeight: 800 } },
+  { name: 'Axomiya buwari', style: { fontSize: '1.5rem', letterSpacing: '0.2em', fontWeight: 300 } },
 ]
 
 export default function TrustedBy() {

@@ -1,0 +1,328 @@
+/* ===== MODELS GALLERY PAGE ===== */
+.models-page {
+  padding-top: var(--nav-height); /* Offset navbar */
+  min-height: 100vh;
+}
+
+/* ── Header Section ── */
+.models-header-section {
+  text-align: center;
+  padding: 8rem 0 4rem;
+}
+
+.models-h1 {
+  font-size: 6.4rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.models-subtitle {
+  font-size: 2rem;
+  color: var(--gray-dark);
+  max-width: 70rem;
+  margin: 0 auto 6rem;
+}
+
+/* Toggle */
+.models-toggle {
+  display: inline-flex;
+  background: var(--gray-lighter);
+  border-radius: 4rem;
+  padding: 0.4rem;
+}
+
+.toggle-btn {
+  padding: 1.2rem 4rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+  transition: var(--transition);
+}
+
+.toggle-btn.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ── Gallery Section ── */
+.gallery-container {
+  width: 100%;
+  padding: 0 4rem; /* Wide layout with just a bit of edge padding */
+  margin: 0 auto;
+}
+
+.models-gallery-section {
+  padding: 0 0 10rem;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.model-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-img-wrapper {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background: var(--gray-lighter);
+  margin-bottom: 1.6rem;
+}
+
+.model-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.model-card:hover .model-img {
+  transform: scale(1.05);
+}
+
+/* Gradient fade at the bottom of the entire gallery to hide the last row */
+.models-gallery-section {
+  position: relative;
+}
+
+.models-gallery-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 85%);
+  pointer-events: none;
+}
+
+.model-name {
+  font-size: 1.6rem;
+  color: var(--gray-dark);
+}
+
+/* ── Unlock CTA Section ── */
+.models-unlock-section {
+  text-align: center;
+  padding: 8rem 0;
+}
+
+.unlock-h2 {
+  font-size: 4.8rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-bottom: 4rem;
+}
+
+.unlock-btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 1.4rem 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  background: var(--gray-lighter);
+  color: var(--black);
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+/* ── Custom Plan Split Section ── */
+.custom-plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+}
+
+.custom-plan-left {
+  background: #222222; /* Dark grey matching Botika */
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 4rem;
+}
+
+.custom-plan-content {
+  max-width: 50rem;
+  text-align: center;
+}
+
+.custom-plan-content h2 {
+  font-size: 5.6rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.custom-plan-content p {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4rem;
+}
+
+.btn-white {
+  display: inline-block;
+  padding: 1.4rem 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  background: var(--white);
+  color: var(--black);
+  transition: var(--transition);
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.custom-plan-right {
+  height: 100%;
+}
+
+.custom-plan-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── FAQ Section ── */
+.faq-section {
+  padding: 12rem 0;
+  background: var(--white);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 8rem;
+}
+
+.faq-title h2 {
+  font-size: 4.8rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--gray-light);
+  padding: 3.2rem 0;
+  cursor: pointer;
+}
+
+.faq-item:first-child {
+  padding-top: 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq-icon {
+  font-size: 2.8rem;
+  color: var(--gray-dark);
+  font-weight: 300;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  margin-top: 2rem;
+}
+
+.faq-answer p {
+  font-size: 1.8rem;
+  color: var(--gray-dark);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1199px) {
+  .models-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .models-h1 {
+    font-size: 4.8rem;
+  }
+  .models-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .custom-plan-grid {
+    grid-template-columns: 1fr;
+  }
+  .custom-plan-left {
+    padding: 8rem 2rem;
+  }
+  .custom-plan-right {
+    height: 50vh;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .faq-title h2 {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .models-h1 {
+    font-size: 3.6rem;
+  }
+  .models-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .unlock-btns {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 479px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+}

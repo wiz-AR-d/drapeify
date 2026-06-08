@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import ContactUs from './pages/ContactUs'
+import ModelsGallery from './pages/ModelsGallery'
 import OnModel from './pages/OnModel'
 import FlatLay from './pages/FlatLay'
 import Mannequin from './pages/Mannequin'
@@ -49,6 +50,7 @@ function App() {
         <Route path="/solutions/create-editorials" element={<CreateEditorials />} />
         <Route path="/solutions/increase-diversity" element={<IncreaseDiversity />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/models" element={<ModelsGallery />} />
       </Routes>
       <Footer />
     </>

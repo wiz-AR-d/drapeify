@@ -11,16 +11,18 @@ const DrapeifyLogo = () => (
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Outer D shape — vertical stem + rounded bowl */}
+      {/* Outer D shape — vertical stem */}
       <path
-        d="M18 8 L18 112 L20 112 L20 8 Z"
-        fill="currentColor"
+        d="M19 8 L19 112"
+        stroke="currentColor"
+        strokeWidth="10"
+        strokeLinecap="round"
       />
       {/* Rounded bowl of the D */}
       <path
         d="M19 8 C19 8 72 8 78 14 C90 26 90 50 90 60 C90 70 90 94 78 106 C72 112 19 112 19 112"
         stroke="currentColor"
-        strokeWidth="7"
+        strokeWidth="10"
         fill="none"
         strokeLinecap="round"
       />
@@ -28,7 +30,7 @@ const DrapeifyLogo = () => (
       <path
         d="M28 28 C38 35 70 42 72 62 C74 80 55 92 38 98"
         stroke="currentColor"
-        strokeWidth="3.5"
+        strokeWidth="5"
         fill="none"
         strokeLinecap="round"
       />
@@ -36,7 +38,7 @@ const DrapeifyLogo = () => (
       <path
         d="M28 40 C42 48 62 56 62 72 C62 84 50 94 38 100"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="3"
         fill="none"
         strokeLinecap="round"
         opacity="0.75"
@@ -63,7 +65,7 @@ export default function Navbar() {
   }
 
   const getHref = (item) => {
-    if (item === 'Model Gallery') return '#model-gallery'
+    if (item === 'Model Gallery') return '/models'
     if (item === 'On Model') return '/products/on-model'
     if (item === 'Flat Lay') return '/products/flat-lay'
     if (item === 'Mannequin') return '/products/mannequin'
@@ -79,16 +81,16 @@ export default function Navbar() {
       <div className="nav-container">
 
         {/* Mobile logo */}
-        <a href="/" className="nav-logo-mobile">
+        <Link to="/" className="nav-logo-mobile">
           <DrapeifyLogo />
-        </a>
+        </Link>
 
         {/* Left: Logo + Links (becomes mobile drawer) */}
         <div className={`nav-left ${mobileOpen ? 'open' : ''}`}>
 
-          <a href="/" className="nav-logo-desktop">
+          <Link to="/" className="nav-logo-desktop">
             <DrapeifyLogo />
-          </a>
+          </Link>
 
           <div className="nav-links">
             {Object.entries(dropdowns).map(([name, items]) => (
