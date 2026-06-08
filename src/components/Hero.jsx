@@ -37,11 +37,11 @@ export default function Hero() {
         <div className="hero-content">
           <h1 className="hero-h1">
             <span className="hero-h1-light">AI fashion models</span>
-            trusted by world-class fashion brands
+            trusted by leading Indian fashion brands
           </h1>
           <div className="hero-details">
             <p className="hero-subtitle">
-              Drapeify helps leading brands create authentic, on-brand imagery at scale, giving teams creative freedom, consistency and full control.
+              Drapeify helps leading Indian apparel, retail, and D2C brands create authentic, localized on-brand imagery at scale, giving teams creative freedom and full control.
             </p>
             <div className="buttons-row">
               <Link to="/contact" className="btn-primary dark" id="header_getstarted">

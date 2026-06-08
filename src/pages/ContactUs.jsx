@@ -113,10 +113,10 @@ export default function ContactUs() {
         <div className="contact-right-content">
           <h3>Top fashion creative teams choose Drapeify</h3>
           <div className="contact-logos">
-            <span>PERRY ELLIS</span>
-            <span>FOREVER 21</span>
-            <span>JORDACHE</span>
-            <span>NIL+MON</span>
+            <span>NARIE</span>
+            <span>SWADESHI VIDESHI</span>
+            <span>THREADZ</span>
+            <span>99SHADES</span>
           </div>
         </div>
       </div>

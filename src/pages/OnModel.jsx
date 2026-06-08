@@ -70,7 +70,7 @@ export default function OnModel() {
                   <img
                     src="/images/bad-onmod.png"
                     loading="lazy"
-                    alt="Screenshot of the create screen in the Botika on model product workflow."
+                    alt="Screenshot of the create screen in the Drapeify on model product workflow."
                     className="img-cover"
                   />
                 </div>

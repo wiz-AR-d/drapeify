@@ -4,20 +4,18 @@ import './Carousel.css'
 
 const slides = [
   {
-    image: '/images/carousel_onmodel.png',
+    image: '/images/cro1.png',
     alt: 'On model photography showing AI-generated fashion model',
   },
   {
-    image: '/images/carousel_flatlay.png',
+    image: '/images/cro2.png',
     alt: 'Flat lay to on-model conversion',
   },
   {
-    image: '/images/carousel_mannequin.png',
+    image: '/images/co3.png',
     alt: 'Mannequin to model conversion',
   },
 ]
-
-const labels = ['On model', 'Flat lay', 'Mannequin']
 
 export default function Carousel() {
   const cardsRef = useRef([])
@@ -102,18 +100,6 @@ export default function Carousel() {
         }
       }
 
-      // Determine which card is currently most visible to highlight label
-      if (!sectionRef.current) return
-      const sectionRect = sectionRef.current.getBoundingClientRect()
-      const scrollIntoSection = -sectionRect.top + 200
-      const cardSpacing = 500 // approximate scroll distance per card
-      let activeIndex = Math.floor(scrollIntoSection / cardSpacing)
-      activeIndex = Math.min(Math.max(activeIndex, 0), slides.length - 1)
-
-      const allLabels = sectionRef.current.querySelectorAll('.carousel-label')
-      allLabels.forEach((label, i) => {
-        label.classList.toggle('active', i === activeIndex)
-      })
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -141,17 +127,6 @@ export default function Carousel() {
             >
               <div className="carousel-card-inner">
                 <img src={slide.image} alt={slide.alt} className="carousel-card-img" />
-                {/* Labels overlay on each card */}
-                <div className="carousel-labels">
-                  {labels.map((label, li) => (
-                    <span
-                      key={label}
-                      className={`carousel-label ${li === i ? 'active' : ''}`}
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}

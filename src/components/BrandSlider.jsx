@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import './BrandSlider.css'
 
 const brandSlides = [
-  { image: '/images/carousel_onmodel.png', brand: 'FOREVER 21', alt: 'Forever 21 AI fashion model' },
-  { image: '/images/carousel_mannequin.png', brand: 'PERRY ELLIS', alt: 'Perry Ellis AI fashion model' },
-  { image: '/images/carousel_flatlay.png', brand: 'HELIOT EMIL', alt: 'Heliot Emil AI fashion model' },
-  { image: '/images/hero_model.png', brand: 'JORDACHE', alt: 'Jordache AI fashion model' },
-  { image: '/images/carousel_onmodel.png', brand: 'NIL+MON', alt: 'Nil+Mon AI fashion model' },
+  { image: '/images/carousel_onmodel.png', brand: 'NARIE', alt: 'Narie AI fashion model' },
+  { image: '/images/carousel_mannequin.png', brand: 'SWADESHI VIDESHI', alt: 'Swadeshi Videshi AI fashion model' },
+  { image: '/images/carousel_flatlay.png', brand: 'THREADZ', alt: 'ThreadZ AI fashion model' },
+  { image: '/images/hero_model.png', brand: 'AXOMIYA BUWARI', alt: 'Axomiya Buwari AI fashion model' },
+  { image: '/images/carousel_onmodel.png', brand: '99SHADES', alt: '99Shades AI fashion model' },
 ]
 
 export default function BrandSlider() {
