@@ -9,18 +9,18 @@ export default function Pricing() {
         <div className="container">
           <h1 className="pricing-h1">Simple, transparent pricing</h1>
           <p className="pricing-subtitle">
-            Professional AI fashion cataloging done for you. We generate premium model photoshoots for your brand.
+            Professional AI fashion cataloging done for you. We generate premium model images for your brand.
           </p>
 
           <div className="trial-banner">
             <div className="trial-badge">Free Trial</div>
             <div className="trial-content">
-              <h2>Get your free sample photoshoots</h2>
-              <p>Send us your product images, and our experts will generate high-quality AI photoshoots for free.</p>
+              <h2>Get your free sample images</h2>
+              <p>Send us your product images, and our experts will generate high-quality AI images for free.</p>
               <div className="trial-features">
                 <div className="trial-feature-item">
                   <span className="feature-number">5</span>
-                  <span className="feature-label">Free Photoshoots</span>
+                  <span className="feature-label">Free Images (1 SKU)</span>
                 </div>
                 <div className="trial-feature-item-divider"></div>
                 <div className="trial-feature-item">
@@ -47,7 +47,7 @@ export default function Pricing() {
             <div className="plan-card">
               <div className="plan-header">
                 <h3 className="plan-title">Basic</h3>
-                <p className="plan-desc">Managed AI catalog photoshoots for growing D2C brands.</p>
+                <p className="plan-desc">Managed AI catalog images for growing D2C brands.</p>
                 <div className="plan-price-row">
                   <span className="plan-currency">₹</span>
                   <span className="plan-price">1,999</span>
@@ -62,7 +62,7 @@ export default function Pricing() {
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Photoshoots generated for <strong>5 SKUs</strong></span>
+                    <span><strong>25 Images</strong> (5 SKUs — 5 images per SKU)</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
@@ -74,7 +74,7 @@ export default function Pricing() {
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Up to 4 high-resolution angles per SKU</span>
+                    <span>Multiple high-resolution angles per product</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
@@ -112,7 +112,7 @@ export default function Pricing() {
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                     <span>
-                      <strong>+ 5 Free SKUs</strong> 
+                      <strong>+ 25 Free Images</strong> (5 bonus SKUs)
                       <span className="limited-time-tag">Limited Time!</span>
                     </span>
                   </li>
@@ -120,7 +120,7 @@ export default function Pricing() {
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Photoshoots generated for <strong>5 SKUs</strong></span>
+                    <span><strong>50 Images</strong> total (5 SKUs standard + 5 bonus)</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
