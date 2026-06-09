@@ -26,7 +26,7 @@ const menModels = [
   { name: 'John', image: '/images/ChatGPT Image Jun 6, 2026, 08_00_33 PM.png' },
   { name: 'Babar', image: '/images/hero_crop_6.png' },
   { name: 'Gurpreet', image: '/images/ChatGPT Image Jun 6, 2026, 08_06_11 PM.png' },
-  { name: 'Kendall', image: '/images/ChatGPT Image Jun 7, 2026, 01_18_02 AM.png' },
+  { name: 'Kartik', image: '/images/ChatGPT Image Jun 7, 2026, 01_18_02 AM.png' },
   { name: 'Dev', image: '/images/ChatGPT Image Jun 7, 2026, 01_29_59 AM.png' },
   { name: 'Tyson', image: '/images/herobg.jpg' },
   { name: 'Rishab', image: '/images/heroblue.jpg' }
