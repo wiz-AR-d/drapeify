@@ -1,6 +1,6 @@
 /* ===== BRAND SLIDER ===== */
 .brand-slider-section {
-  padding: 3.2rem 0 4.8rem 0; /* Reduced bottom padding to tighten gap to next section */
+  padding: 10rem 0 4.8rem 0; /* Increased top padding to add more breathing room from carousel */
   background: var(--white);
 }
 

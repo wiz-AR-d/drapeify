@@ -1,6 +1,7 @@
 /* ===== CAROUSEL SECTION — Card Stacking Scroll ===== */
 .carousel-section {
-  padding: 9.6rem 0 4rem;
+  padding: 9.6rem 0 2rem; /* Reduced bottom padding */
+  margin-bottom: -27rem; /* Pulls the next section up to maintain a tight gap with the taller stack */
   position: relative;
   background: var(--white);
 }
@@ -9,7 +10,7 @@
   position: sticky;
   top: 120px; /* Locks below the navbar */
   text-align: center;
-  margin-bottom: 4rem; /* Exactly matches the 40px sticky gap to prevent jump */
+  margin-bottom: 6rem; /* Match the 60px gap when sticky (300px - 240px) to prevent layout jumps */
   z-index: 50; /* Ensure it stays above cards */
   pointer-events: auto;
 }
@@ -32,18 +33,19 @@
   flex-direction: column;
   max-width: 90rem;
   margin: 0 auto;
+  padding-bottom: 150px; /* Decouples sticky range from Card 3's bottom, giving it a 150px scroll runway */
 }
 
 /* ── Individual card — all stick at the same top ── */
 .carousel-card {
   position: sticky;
-  top: 280px; /* Reduced sticky top so cards are closer to the text */
+  top: 300px; /* Reduced sticky top for a tighter, more compact gap below the title */
   z-index: calc(10 + var(--card-index, 0));
   margin-bottom: 150px; /* Gap to allow scroll-over effect */
 }
 
 .carousel-card:last-child {
-  margin-bottom: 6rem; /* Gives just enough scroll space for the card to fully cover the previous one before the next section pushes it up */
+  margin-bottom: 150px; /* Must match other cards to align push-up trigger points and prevent separation */
 }
 
 .carousel-card-inner {

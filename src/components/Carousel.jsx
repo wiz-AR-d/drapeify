@@ -19,6 +19,9 @@ const slides = [
 
 export default function Carousel() {
   const cardsRef = useRef([])
+  // Clear refs array on each render to prevent stale elements from hot-reloading
+  cardsRef.current = []
+  
   const sectionRef = useRef(null)
   const titleRef = useRef(null)
 
@@ -27,9 +30,11 @@ export default function Carousel() {
       cardsRef.current.forEach((card, i) => {
         if (!card) return
         
-        const stickyTop = 280
+        const stickyTop = 300
 
-        if (i < cardsRef.current.length - 1) {
+        // Use slides.length to guarantee we accurately identify the last card
+        // even if refs get messy during hot-reloads.
+        if (i < slides.length - 1) {
           const nextCard = cardsRef.current[i + 1]
           if (!nextCard) return
           const nextRect = nextCard.getBoundingClientRect()
@@ -57,7 +62,7 @@ export default function Carousel() {
             }
           }
         } else {
-          // LAST CARD LOGIC
+          // LAST CARD LOGIC (Guarantee it never shrinks)
           // The last card should NEVER scale or fade out. It should remain solid 
           // to perfectly cover the previous stacked cards as the entire section scrolls up.
           const inner = card.querySelector('.carousel-card-inner')
@@ -73,7 +78,7 @@ export default function Carousel() {
         const lastCard = cardsRef.current[cardsRef.current.length - 1]
         if (lastCard) {
           const lastCardRect = lastCard.getBoundingClientRect()
-          const stickyTop = 280 // Must match the cards' CSS top
+          const stickyTop = 300 // Must match the cards' CSS top
           if (lastCardRect.top < stickyTop) {
             // The last card is being pushed up! Push the title up by the exact same amount.
             const pushUpAmount = stickyTop - lastCardRect.top
