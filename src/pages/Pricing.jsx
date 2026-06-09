@@ -1,0 +1,170 @@
+import { Link } from 'react-router-dom'
+import './Pricing.css'
+
+export default function Pricing() {
+  return (
+    <div className="pricing-page fade-in-up">
+      {/* ── TOP SECTION: TRIAL OFFER ── */}
+      <section className="pricing-hero">
+        <div className="container">
+          <h1 className="pricing-h1">Simple, transparent pricing</h1>
+          <p className="pricing-subtitle">
+            Professional AI fashion cataloging done for you. We generate premium model images for your brand.
+          </p>
+
+          <div className="trial-banner">
+            <div className="trial-badge">Free Trial</div>
+            <div className="trial-content">
+              <h2>Get your free sample images</h2>
+              <p>Send us your product images, and our experts will generate high-quality AI images for free.</p>
+              <div className="trial-features">
+                <div className="trial-feature-item">
+                  <span className="feature-number">5</span>
+                  <span className="feature-label">Free Images (1 SKU)</span>
+                </div>
+                <div className="trial-feature-item-divider"></div>
+                <div className="trial-feature-item">
+                  <span className="feature-number">1</span>
+                  <span className="feature-label">Video Generation</span>
+                </div>
+              </div>
+            </div>
+            <div className="trial-cta">
+              <Link to="/contact" className="btn-primary dark">
+                Get Free Samples
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PLANS GRID SECTION ── */}
+      <section className="plans-section">
+        <div className="container">
+          <div className="plans-grid">
+            
+            {/* ── BASIC PLAN ── */}
+            <div className="plan-card">
+              <div className="plan-header">
+                <h3 className="plan-title">Basic</h3>
+                <p className="plan-desc">Managed AI catalog images for growing D2C brands.</p>
+                <div className="plan-price-row">
+                  <span className="plan-currency">₹</span>
+                  <span className="plan-price">1,999</span>
+                  <span className="plan-period">/ month</span>
+                </div>
+              </div>
+              <div className="plan-divider"></div>
+              <div className="plan-body">
+                <p className="plan-features-title">What we do for you:</p>
+                <ul className="plan-features-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span><strong>25 Images</strong> (5 SKUs — 5 images per SKU)</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Curated selection from our model gallery</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Multiple high-resolution angles per product</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Retouching & quality assurance checks</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="plan-footer">
+                <Link to="/contact" className="btn-primary outline plan-btn">
+                  Choose Basic
+                </Link>
+              </div>
+            </div>
+
+            {/* ── PRO PLAN (MOST POPULAR) ── */}
+            <div className="plan-card popular">
+              <div className="popular-badge">Most Popular</div>
+              <div className="plan-header">
+                <h3 className="plan-title">Pro</h3>
+                <p className="plan-desc">Best for high-volume catalogs and campaign releases.</p>
+                <div className="plan-price-row">
+                  <span className="plan-currency">₹</span>
+                  <span className="plan-price">4,999</span>
+                  <span className="plan-period">/ month</span>
+                </div>
+              </div>
+              <div className="plan-divider"></div>
+              <div className="plan-body">
+                <p className="plan-features-title">What we do for you:</p>
+                <ul className="plan-features-list">
+                  <li className="promo-feature">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>
+                      <strong>+ 25 Free Images</strong> (5 bonus SKUs)
+                      <span className="limited-time-tag">Limited Time!</span>
+                    </span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span><strong>50 Images</strong> total (5 SKUs standard + 5 bonus)</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span><strong>5 Videos</strong> generated (AI fashion clips)</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Access to premium models & custom backdrops</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Priority delivery & revisions included</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="plan-footer">
+                <Link to="/contact" className="btn-primary dark plan-btn">
+                  Choose Pro
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── ENTERPRISE EXTRA SPLIT ── */}
+      <section className="pricing-enterprise">
+        <div className="container">
+          <div className="enterprise-box">
+            <h2>Need large-scale catalog shoots?</h2>
+            <p>We partner with enterprise fashion brands to generate custom models and shoot catalogs at scale.</p>
+            <Link to="/contact" className="btn-primary dark">
+              Contact Sales
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import Lenis from '@studio-freight/lenis'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -13,9 +13,24 @@ import CutProductionCosts from './pages/CutProductionCosts'
 import GoToMarketFaster from './pages/GoToMarketFaster'
 import CreateEditorials from './pages/CreateEditorials'
 import IncreaseDiversity from './pages/IncreaseDiversity'
+import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import BlogList from './pages/BlogList'
+import BlogPost from './pages/BlogPost'
+import Pricing from './pages/Pricing'
 import './App.css'
 
 function App() {
+  const { pathname } = useLocation()
+  const lenisRef = useRef(null)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true })
+    }
+  }, [pathname])
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 3.0, // Extremely slow, luxurious glide
@@ -24,6 +39,8 @@ function App() {
       wheelMultiplier: 0.7,
       touchMultiplier: 1.5,
     })
+
+    lenisRef.current = lenis
 
     function raf(time) {
       lenis.raf(time)
@@ -34,6 +51,7 @@ function App() {
 
     return () => {
       lenis.destroy()
+      lenisRef.current = null
     }
   }, [])
 
@@ -51,6 +69,11 @@ function App() {
         <Route path="/solutions/increase-diversity" element={<IncreaseDiversity />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/models" element={<ModelsGallery />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <Footer />
     </>
