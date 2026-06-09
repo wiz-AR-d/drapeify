@@ -9,7 +9,7 @@
   position: sticky;
   top: 120px; /* Locks below the navbar */
   text-align: center;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem; /* Exactly matches the 40px sticky gap to prevent jump */
   z-index: 50; /* Ensure it stays above cards */
   pointer-events: auto;
 }
@@ -37,13 +37,13 @@
 /* ── Individual card — all stick at the same top ── */
 .carousel-card {
   position: sticky;
-  top: 340px; /* Sticks safely below the locked title and button */
+  top: 280px; /* Reduced sticky top so cards are closer to the text */
   z-index: calc(10 + var(--card-index, 0));
   margin-bottom: 150px; /* Gap to allow scroll-over effect */
 }
 
 .carousel-card:last-child {
-  margin-bottom: 150px; /* Small pause so card fully sticks and covers the previous one, then next section appears */
+  margin-bottom: 6rem; /* Gives just enough scroll space for the card to fully cover the previous one before the next section pushes it up */
 }
 
 .carousel-card-inner {

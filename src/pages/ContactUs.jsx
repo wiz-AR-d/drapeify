@@ -113,7 +113,7 @@ export default function ContactUs() {
         <div className="contact-right-content">
           <h3>Top fashion creative teams choose Drapeify</h3>
           <div className="contact-logos">
-            <span style={{ fontFamily: 'serif', letterSpacing: '0.05em' }}>99Shadesff</span>
+            <span style={{ fontFamily: 'serif', letterSpacing: '0.05em' }}>29Shadesff</span>
             <span>Narie Sarees</span>
             <span style={{ fontWeight: 600, letterSpacing: '0.1em' }}>Swadeshi Videshi</span>
             <span style={{ fontFamily: 'serif', fontWeight: 800 }}>ThreadZ</span>

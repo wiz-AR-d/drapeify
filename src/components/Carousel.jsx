@@ -27,7 +27,7 @@ export default function Carousel() {
       cardsRef.current.forEach((card, i) => {
         if (!card) return
         
-        const stickyTop = 340
+        const stickyTop = 280
 
         if (i < cardsRef.current.length - 1) {
           const nextCard = cardsRef.current[i + 1]
@@ -56,29 +56,14 @@ export default function Carousel() {
               inner.style.opacity = 1
             }
           }
-        } else if (i === cardsRef.current.length - 1) {
-          // Last card scroll out animation
-          const rect = card.getBoundingClientRect()
-          const distMovedUp = stickyTop - rect.top
-          
-          if (distMovedUp > 0) {
-            const animationDistance = 400
-            const progress = Math.min(distMovedUp / animationDistance, 1)
-            
-            const scale = 1 - progress * 0.15
-            const opacity = 1 - progress * 0.4
-            
-            const inner = card.querySelector('.carousel-card-inner')
-            if (inner) {
-              inner.style.transform = `scale(${scale})`
-              inner.style.opacity = opacity
-            }
-          } else {
-            const inner = card.querySelector('.carousel-card-inner')
-            if (inner) {
-              inner.style.transform = 'scale(1)'
-              inner.style.opacity = 1
-            }
+        } else {
+          // LAST CARD LOGIC
+          // The last card should NEVER scale or fade out. It should remain solid 
+          // to perfectly cover the previous stacked cards as the entire section scrolls up.
+          const inner = card.querySelector('.carousel-card-inner')
+          if (inner) {
+            inner.style.transform = 'scale(1)'
+            inner.style.opacity = 1
           }
         }
       })
@@ -88,7 +73,7 @@ export default function Carousel() {
         const lastCard = cardsRef.current[cardsRef.current.length - 1]
         if (lastCard) {
           const lastCardRect = lastCard.getBoundingClientRect()
-          const stickyTop = 340 // Must match the cards' CSS top
+          const stickyTop = 280 // Must match the cards' CSS top
           if (lastCardRect.top < stickyTop) {
             // The last card is being pushed up! Push the title up by the exact same amount.
             const pushUpAmount = stickyTop - lastCardRect.top

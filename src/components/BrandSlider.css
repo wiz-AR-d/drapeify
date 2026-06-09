@@ -1,6 +1,6 @@
 /* ===== BRAND SLIDER ===== */
 .brand-slider-section {
-  padding: 9.6rem 0;
+  padding: 3.2rem 0 4.8rem 0; /* Reduced bottom padding to tighten gap to next section */
   background: var(--white);
 }
 
@@ -30,34 +30,34 @@
 
 .brand-slider-track {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 2rem;
-  transition: transform 0.5s ease;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  width: max-content;
 }
 
 .brand-slide {
   flex-shrink: 0;
-  width: 18vw;
-  max-width: 22rem;
+  width: 24rem; 
   aspect-ratio: 3/4;
-  border-radius: 0.8rem;
+  height: auto;
+  border-radius: 2.4rem;
   overflow: hidden;
   position: relative;
   opacity: 0.5;
-  transform: scale(0.9);
-  transition: all 0.5s ease;
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
 }
 
 .brand-slide.active {
+  width: 34rem; 
   opacity: 1;
-  transform: scale(1.25);
   z-index: 2;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .brand-slide img {
-  border-radius: 0.8rem;
+  border-radius: 2.4rem;
 }
 
 .brand-slide-tag {
@@ -95,33 +95,35 @@
 .brand-slider-btn {
   width: 4.4rem;
   height: 4.4rem;
-  border-radius: 50%;
-  border: 1px solid var(--gray-light);
+  border-radius: 0.6rem;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: var(--white);
+  background: var(--gray-lighter);
   transition: var(--transition);
 }
 
 .brand-slider-btn:hover {
-  background: var(--gray-lighter);
-  border-color: var(--gray);
+  background: #e0e0e0;
 }
 
 @media (max-width: 1536px) and (min-width: 992px) {
   .brand-slider-h2 { font-size: 3.2rem; }
-  .brand-slide { width: 15vw; }
+  .brand-slide { width: 22rem; }
+  .brand-slide.active { width: 30rem; }
 }
 
 @media (max-width: 991px) {
-  .brand-slider-section { padding: 6.4rem 0; }
+  .brand-slider-section { padding: 3.2rem 0 6.4rem 0; }
   .brand-slider-h2 { font-size: 2.8rem; }
-  .brand-slide { width: 28vw; max-width: none; }
   .brand-slider-nav { margin-top: 4rem; }
+  .brand-slide { width: 18rem; }
+  .brand-slide.active { width: 26rem; }
 }
 
 @media (max-width: 479px) {
-  .brand-slide { width: 40vw; }
+  .brand-slide { width: 14rem; }
+  .brand-slide.active { width: 22rem; }
 }
