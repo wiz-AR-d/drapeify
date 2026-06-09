@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const DrapeifyLogo = () => (
@@ -55,11 +56,10 @@ export default function Footer() {
           <div className="footer-links-grid">
             <div className="footer-col">
               <h4 className="footer-col-title">Product</h4>
-              <a href="#" className="footer-link">On Model</a>
-              <a href="#" className="footer-link">Flat Lay</a>
-              <a href="#" className="footer-link">Mannequin</a>
-              <a href="#" className="footer-link">Video</a>
-              <a href="#" className="footer-link">Model Gallery</a>
+              <Link to="/models" className="footer-link">Model Gallery</Link>
+              <Link to="/products/flat-lay" className="footer-link">Flat Lay</Link>
+              <Link to="/products/mannequin" className="footer-link">Mannequin</Link>
+              <Link to="/products/on-model" className="footer-link">On Model</Link>
             </div>
             <div className="footer-col">
               <h4 className="footer-col-title">Company</h4>

@@ -60,7 +60,7 @@ export default function Navbar() {
   }, [])
 
   const dropdowns = {
-    Product:   ['On Model', 'Flat Lay', 'Mannequin', 'Model Gallery'],
+    Product:   ['Model Gallery', 'Flat Lay', 'Mannequin', 'On Model'],
     Solutions: ['Cut production cost', 'Go to market faster', 'Create editorials', 'Increase diversity'],
   }
 

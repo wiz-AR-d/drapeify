@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import Lenis from '@studio-freight/lenis'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -16,6 +16,16 @@ import IncreaseDiversity from './pages/IncreaseDiversity'
 import './App.css'
 
 function App() {
+  const { pathname } = useLocation()
+  const lenisRef = useRef(null)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true })
+    }
+  }, [pathname])
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 3.0, // Extremely slow, luxurious glide
@@ -24,6 +34,8 @@ function App() {
       wheelMultiplier: 0.7,
       touchMultiplier: 1.5,
     })
+
+    lenisRef.current = lenis
 
     function raf(time) {
       lenis.raf(time)
@@ -34,6 +46,7 @@ function App() {
 
     return () => {
       lenis.destroy()
+      lenisRef.current = null
     }
   }, [])
 
