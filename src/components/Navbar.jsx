@@ -62,6 +62,7 @@ export default function Navbar() {
   const dropdowns = {
     Product:   ['Model Gallery', 'Flat Lay', 'Mannequin', 'On Model'],
     Solutions: ['Cut production cost', 'Go to market faster', 'Create editorials', 'Increase diversity'],
+    Resources: ['Blog'],
   }
 
   const getHref = (item) => {
@@ -73,6 +74,7 @@ export default function Navbar() {
     if (item === 'Go to market faster') return '/solutions/go-to-market-faster'
     if (item === 'Create editorials') return '/solutions/create-editorials'
     if (item === 'Increase diversity') return '/solutions/increase-diversity'
+    if (item === 'Blog') return '/blog'
     return '#'
   }
 
@@ -147,7 +149,16 @@ export default function Navbar() {
                 </div>
               </div>
             ))}
-            <a href="#" className="nav-link">Pricing</a>
+            <Link 
+              to="/pricing" 
+              className="nav-link"
+              onClick={() => {
+                setMobileOpen(false)
+                window.scrollTo(0, 0)
+              }}
+            >
+              Pricing
+            </Link>
           </div>
 
           <div className="nav-cta mobile-cta">

@@ -13,6 +13,11 @@ import CutProductionCosts from './pages/CutProductionCosts'
 import GoToMarketFaster from './pages/GoToMarketFaster'
 import CreateEditorials from './pages/CreateEditorials'
 import IncreaseDiversity from './pages/IncreaseDiversity'
+import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import BlogList from './pages/BlogList'
+import BlogPost from './pages/BlogPost'
+import Pricing from './pages/Pricing'
 import './App.css'
 
 function App() {
@@ -64,6 +69,11 @@ function App() {
         <Route path="/solutions/increase-diversity" element={<IncreaseDiversity />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/models" element={<ModelsGallery />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <Footer />
     </>

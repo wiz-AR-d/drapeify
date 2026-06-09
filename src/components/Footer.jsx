@@ -64,9 +64,9 @@ export default function Footer() {
             <div className="footer-col">
               <h4 className="footer-col-title">Company</h4>
               <a href="#" className="footer-link">About us</a>
-              <a href="#" className="footer-link">Blog</a>
+              <Link to="/blog" className="footer-link">Blog</Link>
               <a href="#" className="footer-link">Case Studies</a>
-              <a href="#" className="footer-link">Pricing</a>
+              <Link to="/pricing" className="footer-link">Pricing</Link>
             </div>
             <div className="footer-col">
               <h4 className="footer-col-title">Support</h4>
@@ -76,8 +76,8 @@ export default function Footer() {
             </div>
             <div className="footer-col">
               <h4 className="footer-col-title">Legal</h4>
-              <a href="#" className="footer-link">Terms of service</a>
-              <a href="#" className="footer-link">Privacy policy</a>
+              <Link to="/terms" className="footer-link">Terms of service</Link>
+              <Link to="/privacy" className="footer-link">Privacy policy</Link>
               <a href="#" className="footer-link">Your Privacy Choices</a>
             </div>
           </div>

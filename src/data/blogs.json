@@ -1,0 +1,120 @@
+[
+  {
+    "id": "post-1",
+    "title": "Scaling Indian D2C Fashion in 2026: Why Traditional Shoots are the Bottleneck",
+    "slug": "scaling-indian-d2c-fashion-photoshoots-bottleneck",
+    "date": "June 9, 2026",
+    "readTime": "5 min read",
+    "category": "D2C Growth",
+    "featured": true,
+    "coverImage": "/images/cro1.png",
+    "excerpt": "Traditional model photoshoots cost lakhs and take weeks. Learn how India's fastest-growing retail labels are bypassing the studio to launch collections in under 24 hours.",
+    "author": {
+      "name": "Rohan Sharma",
+      "role": "Head of Product Strategy",
+      "avatar": "/images/ChatGPT Image Jun 6, 2026, 07_24_02 PM.png"
+    },
+    "sections": [
+      {
+        "type": "paragraph",
+        "text": "The Indian D2C apparel landscape is growing at an unprecedented rate. Brands are releasing micro-collections every other week to cater to rapid shift trends. However, there is a massive roadblock that every brand runs into: the catalog photoshoot."
+      },
+      {
+        "type": "heading",
+        "text": "The High Cost of Coordination"
+      },
+      {
+        "type": "paragraph",
+        "text": "Organizing a single professional studio shoot in Mumbai or Delhi requires booking runway models, makeup artists, photographers, renting lighting equipment, and managing logistics. For a small to mid-sized label releasing 50 styles a month, this cataloging overhead can easily climb into lakhs of rupees."
+      },
+      {
+        "type": "paragraph",
+        "text": "Beyond the financial drain, the primary bottleneck is time. From shipping physical samples to getting finished, retouched images back from the studio, the turnaround timeline is frequently 4 to 6 weeks. In fashion, a 6-week delay means you missed the trend."
+      },
+      {
+        "type": "heading",
+        "text": "Enter AI-Generated Model Shoots"
+      },
+      {
+        "type": "paragraph",
+        "text": "Drapeify allows brands to bypass this friction entirely. By taking simple flat lays or ghost mannequin photography of your garments and processing them with our optimized diffusion algorithms, you get high-resolution, on-model fashion shots in minutes. Instead of spending ₹50,000 per style, you get catalog-ready visuals for under ₹99."
+      },
+      {
+        "type": "heading",
+        "text": "Why Brands are Switching"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Launch collection within 24 hours of sample arrival instead of weeks.",
+          "Reduce creative dependency on studio bookings and coordination.",
+          "Instantly adapt backgrounds to match seasonal festivals or lifestyle concepts."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "post-2",
+    "title": "Representing Real Customers: The Rise of Inclusive AI Models in Ethnicwear",
+    "slug": "rise-of-inclusive-ai-models-in-ethnicwear",
+    "date": "June 8, 2026",
+    "readTime": "4 min read",
+    "category": "AI Fashion",
+    "featured": false,
+    "coverImage": "/images/herobg.jpg",
+    "excerpt": "From sarees to lehengas, styling for diverse skin tones and body demographics is key to localizing trust. Discover how AI models unlock personalization.",
+    "author": {
+      "name": "Suhani Saranga",
+      "role": "Creative Lead",
+      "avatar": "/images/ChatGPT Image Jun 6, 2026, 06_58_19 PM.png"
+    },
+    "sections": [
+      {
+        "type": "paragraph",
+        "text": "Historically, e-commerce cataloging has relied on a narrow set of standardized model shapes and skin tones. However, as ethnicwear e-commerce expands across tier-2 and tier-3 cities in India, consumer expectations are shifting. Customers want to see how a saree, salwar suite, or sherwani looks on someone who reflects their body structure and skin tone."
+      },
+      {
+        "type": "heading",
+        "text": "Hyper-Localized Marketing"
+      },
+      {
+        "type": "paragraph",
+        "text": "AI model generation allows creative teams to easily swap model demographics in a single click. Instead of committing to a single model for your collection, you can render your products on diverse skin tones, body shapes, and age ranges."
+      },
+      {
+        "type": "paragraph",
+        "text": "This localization results in a significant lift in click-through rates (CTR) and customer engagement, because buyers feel a stronger connection with the brand."
+      }
+    ]
+  },
+  {
+    "id": "post-3",
+    "title": "Calculating the True Cost of Ghost Mannequin and Flat Lay Cataloging",
+    "slug": "cost-of-ghost-mannequin-flat-lay-cataloging",
+    "date": "June 5, 2026",
+    "readTime": "6 min read",
+    "category": "Cost Savings",
+    "featured": false,
+    "coverImage": "/images/cro2.png",
+    "excerpt": "Is hanger photography holding back your conversions? We break down the exact ROI numbers of flat lay vs. photorealistic on-model rendering.",
+    "author": {
+      "name": "Amit Patel",
+      "role": "D2C Growth Analyst",
+      "avatar": "/images/ChatGPT Image Jun 6, 2026, 08_00_33 PM.png"
+    },
+    "sections": [
+      {
+        "type": "paragraph",
+        "text": "Many brands start by displaying products as flat lays on a clean white floor, or on ghost mannequins. While this is cheap and fast, it fails to show fit, drape, and length. Consequently, return rates increase and conversions drop."
+      },
+      {
+        "type": "heading",
+        "text": "Analyzing the Conversion Rates"
+      },
+      {
+        "type": "paragraph",
+        "text": "Industry stats show that products displayed on real humans experience up to 40% higher conversion rates compared to flat lays alone. With Drapeify, since you can convert those existing flat lays into premium model shots for ₹99, the incremental conversion lift pays for the AI cost within the first few sales."
+      }
+    ]
+  }
+]

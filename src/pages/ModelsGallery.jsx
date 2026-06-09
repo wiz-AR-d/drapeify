@@ -4,32 +4,32 @@ import './ModelsGallery.css'
 
 const womenModels = [
   { name: 'Emma', image: '/images/hero_crop_3.png' },
-  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_14_44 PM.png' },
-  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_58_19 PM.png' },
+  { name: 'Suhani', image: '/images/ChatGPT Image Jun 6, 2026, 06_14_44 PM.png' },
+  { name: 'Kasturi', image: '/images/ChatGPT Image Jun 6, 2026, 06_58_19 PM.png' },
   // { name: 'Adrian', image: '/images/hero_model_2.png' },
-  { name: 'Lucky', image: '/images/hero_crop_7.png' },
-  { name: 'Sophie', image: '/images/hero_crop_2.jpeg' },
+  { name: 'Brenda', image: '/images/hero_crop_7.png' },
+  { name: 'Ankita', image: '/images/hero_crop_2.jpeg' },
   { name: 'Sophie', image: '/images/hero_model.jpeg' },
-  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_47_56 PM.png' },
-  { name: 'Mia', image: '/images/ChatGPT Image Jun 6, 2026, 06_16_40 PM.png' },
-  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_30_20 PM.png' },
-  { name: 'Theo', image: '/images/ChatGPT Image Jun 6, 2026, 06_34_57 PM.png' },
+  { name: 'Jyoti', image: '/images/ChatGPT Image Jun 6, 2026, 06_47_56 PM.png' },
+  { name: 'Valeria', image: '/images/ChatGPT Image Jun 6, 2026, 06_16_40 PM.png' },
+  { name: 'Anya', image: '/images/ChatGPT Image Jun 6, 2026, 06_30_20 PM.png' },
+  { name: 'Shiobhan', image: '/images/ChatGPT Image Jun 6, 2026, 06_34_57 PM.png' },
 
 
 ]
 
 const menModels = [
-  { name: 'Noah', image: '/images/ChatGPT Image Jun 6, 2026, 07_24_02 PM.png' },
-  { name: 'Liam', image: '/images/ChatGPT Image Jun 6, 2026, 07_42_34 PM.png' },
+  { name: 'Aryan', image: '/images/ChatGPT Image Jun 6, 2026, 07_24_02 PM.png' },
+  { name: 'Parth', image: '/images/ChatGPT Image Jun 6, 2026, 07_42_34 PM.png' },
 
-  { name: 'Jobu', image: '/images/hero_model_4.png' },
-  { name: 'Oliver', image: '/images/ChatGPT Image Jun 6, 2026, 08_00_33 PM.png' },
-  { name: 'Chloe', image: '/images/hero_crop_6.png' },
-  { name: 'Elijah', image: '/images/ChatGPT Image Jun 6, 2026, 08_06_11 PM.png' },
-  { name: 'James', image: '/images/ChatGPT Image Jun 7, 2026, 01_18_02 AM.png' },
-  { name: 'Chloe', image: '/images/ChatGPT Image Jun 7, 2026, 01_29_59 AM.png' },
-  { name: 'Chloe', image: '/images/herobg.jpg' },
-  { name: 'Chloe', image: '/images/heroblue.jpg' }
+  { name: 'Rahul', image: '/images/hero_model_4.png' },
+  { name: 'John', image: '/images/ChatGPT Image Jun 6, 2026, 08_00_33 PM.png' },
+  { name: 'Babar', image: '/images/hero_crop_6.png' },
+  { name: 'Gurpreet', image: '/images/ChatGPT Image Jun 6, 2026, 08_06_11 PM.png' },
+  { name: 'Kendall', image: '/images/ChatGPT Image Jun 7, 2026, 01_18_02 AM.png' },
+  { name: 'Dev', image: '/images/ChatGPT Image Jun 7, 2026, 01_29_59 AM.png' },
+  { name: 'Tyson', image: '/images/herobg.jpg' },
+  { name: 'Rishab', image: '/images/heroblue.jpg' }
 ]
 
 const faqs = [
