@@ -78,9 +78,13 @@ export default function CutProductionCosts() {
                     <path d="M10.1999 6L1.79996 6" stroke="currentColor" strokeWidth="1.28571" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </Link>
-                <Link to="/contact" className="sol-btn-secondary" id="sol_cost_bookcall">
+                <button 
+                  onClick={() => document.getElementById('roi-calculator')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="sol-btn-secondary" 
+                  id="sol_cost_bookcall"
+                >
                   Calculate Custom Plan
-                </Link>
+                </button>
               </div>
             </div>
             <div className="sol-hero-img-c">
@@ -110,7 +114,7 @@ export default function CutProductionCosts() {
       </section>
 
       {/* ROI Calculator Section */}
-      <section className="sol-calculator-s">
+      <section className="sol-calculator-s" id="roi-calculator">
         <div className="container">
           <div className="sol-calc-container">
             <div className="sol-calc-info">

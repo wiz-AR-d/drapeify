@@ -15,16 +15,23 @@ const brandSlides = [
 export default function BrandSlider() {
   const sliderRef = useRef(null)
   const wrapperRef = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(2)
+  
+  // Triplicate the slides to allow seamless looping in both directions
+  const extendedSlides = [...brandSlides, ...brandSlides, ...brandSlides]
+  
+  // Start in the middle copy of slides (index 2 corresponds to brandSlides.length + 2)
+  const [activeIndex, setActiveIndex] = useState(brandSlides.length + 2)
+  const [transitionEnabled, setTransitionEnabled] = useState(true)
 
   // Track dimensions for precise centering calculation
   const [wrapperWidth, setWrapperWidth] = useState(0)
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200)
 
   const scroll = (dir) => {
+    if (!transitionEnabled) return
     setActiveIndex(prev => {
-      if (dir === 'next') return (prev + 1) % brandSlides.length
-      return (prev - 1 + brandSlides.length) % brandSlides.length
+      if (dir === 'next') return prev + 1
+      return prev - 1
     })
   }
 
@@ -40,13 +47,46 @@ export default function BrandSlider() {
     return () => window.removeEventListener('resize', updateWidth)
   }, [])
 
-  // Auto-play interval: every 2.5 seconds to allow the slower 1s transition to finish smoothly
+  // Auto-play interval: every 2.5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       scroll('next')
     }, 2500)
     return () => clearInterval(timer)
-  }, [])
+  }, [transitionEnabled]) // Re-run effect if transition state changes to prevent overlapping intervals
+
+  // Handle the seamless reset once transition ends
+  const handleTransitionEnd = () => {
+    const len = brandSlides.length
+    if (activeIndex >= 2 * len) {
+      // Instantly jump back to the middle set
+      setTransitionEnabled(false)
+      setActiveIndex(activeIndex - len)
+    } else if (activeIndex < len) {
+      // Instantly jump forward to the middle set
+      setTransitionEnabled(false)
+      setActiveIndex(activeIndex + len)
+    }
+  }
+
+  // Force reflow and re-enable transitions in the next frame
+  useEffect(() => {
+    if (!transitionEnabled) {
+      if (sliderRef.current) {
+        // eslint-disable-next-line no-unused-expressions
+        sliderRef.current.offsetHeight
+      }
+      requestAnimationFrame(() => {
+        setTransitionEnabled(true)
+      })
+    }
+  }, [transitionEnabled])
+
+  // Handle direct card clicks
+  const handleCardClick = (virtualIndex) => {
+    if (!transitionEnabled) return
+    setActiveIndex(virtualIndex)
+  }
 
   // Mathematical logic for perfect physical centering
   const getDims = () => {
@@ -79,15 +119,20 @@ export default function BrandSlider() {
           <div
             className="brand-slider-track"
             ref={sliderRef}
+            onTransitionEnd={handleTransitionEnd}
             style={{
-              transform: `translateX(${translateX}px)`
+              transform: `translateX(${translateX}px)`,
+              transition: transitionEnabled ? undefined : 'none'
             }}
           >
-            {brandSlides.map((slide, i) => (
+            {extendedSlides.map((slide, i) => (
               <div
                 key={i}
                 className={`brand-slide ${i === activeIndex ? 'active' : ''}`}
-                onClick={() => setActiveIndex(i)}
+                onClick={() => handleCardClick(i)}
+                style={{
+                  transition: transitionEnabled ? undefined : 'none'
+                }}
               >
                 <img src={slide.image} alt={slide.alt} className="img-cover" />
                 <div className="brand-slide-tag">

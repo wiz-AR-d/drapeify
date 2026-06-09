@@ -65,20 +65,17 @@ export default function Footer() {
               <h4 className="footer-col-title">Company</h4>
               <a href="#" className="footer-link">About us</a>
               <Link to="/blog" className="footer-link">Blog</Link>
-              <a href="#" className="footer-link">Case Studies</a>
               <Link to="/pricing" className="footer-link">Pricing</Link>
             </div>
             <div className="footer-col">
               <h4 className="footer-col-title">Support</h4>
-              <a href="#" className="footer-link">Help center</a>
-              <a href="#" className="footer-link">Contact support</a>
-              <a href="#" className="footer-link">Contact sales</a>
+              <Link to="/faq" className="footer-link">FAQ</Link>
+              <Link to="/contact" className="footer-link">Contact Us</Link>
             </div>
             <div className="footer-col">
               <h4 className="footer-col-title">Legal</h4>
               <Link to="/terms" className="footer-link">Terms of service</Link>
               <Link to="/privacy" className="footer-link">Privacy policy</Link>
-              <a href="#" className="footer-link">Your Privacy Choices</a>
             </div>
           </div>
         </div>

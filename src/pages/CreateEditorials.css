@@ -193,24 +193,7 @@
   width: 100%;
 }
 
-/* ── CTA Card ── */
-.ed-footer-cta-s {
-  padding: 10rem 0;
-  background-color: #fff;
-  border-top: 1px solid #f0f0f3;
-}
 
-.ed-cta-card {
-  max-width: 80rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.ed-cta-btn-c {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
-}
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {

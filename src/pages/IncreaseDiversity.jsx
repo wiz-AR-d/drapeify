@@ -73,7 +73,7 @@ export default function IncreaseDiversity() {
                     <path d="M10.1999 6L1.79996 6" stroke="currentColor" strokeWidth="1.28571" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </Link>
-                <Link to="/contact" className="sol-btn-secondary" id="sol_div_bookcall">
+                <Link to="/models" className="sol-btn-secondary" id="sol_div_bookcall">
                   Explore Models
                 </Link>
               </div>

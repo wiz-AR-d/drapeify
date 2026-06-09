@@ -156,22 +156,7 @@ export default function CreateEditorials() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="ed-footer-cta-s">
-        <div className="container">
-          <div className="ed-cta-card">
-            <h2 className="sol-section-h2 text-center">Ready to Create Your Campaign?</h2>
-            <p className="sol-section-p text-center max-w">
-              Drapeify handles traditional wear, cosmetics, intimates, and everyday clothing with maximum texture realism. Start creating today.
-            </p>
-            <div className="ed-cta-btn-c">
-              <Link to="/contact" className="sol-btn-primary" id="sol_ed_footer_getstarted">
-                Book a Brand Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   )
 }

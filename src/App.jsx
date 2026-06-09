@@ -18,6 +18,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import BlogList from './pages/BlogList'
 import BlogPost from './pages/BlogPost'
 import Pricing from './pages/Pricing'
+import FAQ from './pages/FAQ'
 import './App.css'
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
       <Footer />
     </>

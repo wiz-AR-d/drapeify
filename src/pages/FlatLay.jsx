@@ -163,6 +163,23 @@ export default function FlatLay() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="ed-footer-cta-s">
+        <div className="container">
+          <div className="ed-cta-card">
+            <h2 className="fl-steps-h2" style={{ textAlign: 'center' }}>Ready to Create Your Campaign?</h2>
+            <p className="fl-steps-description" style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+              Drapeify handles traditional wear, cosmetics, intimates, and everyday clothing with maximum texture realism. Start creating today.
+            </p>
+            <div className="ed-cta-btn-c">
+              <Link to="/contact" className="fl-btn-primary" id="sol_ed_footer_getstarted">
+                Book a Brand Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }

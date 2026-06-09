@@ -62,7 +62,7 @@ export default function Navbar() {
   const dropdowns = {
     Product:   ['Model Gallery', 'Flat Lay', 'Mannequin', 'On Model'],
     Solutions: ['Cut production cost', 'Go to market faster', 'Create editorials', 'Increase diversity'],
-    Resources: ['Blog'],
+    Resources: ['Blog', 'FAQ'],
   }
 
   const getHref = (item) => {
@@ -75,6 +75,7 @@ export default function Navbar() {
     if (item === 'Create editorials') return '/solutions/create-editorials'
     if (item === 'Increase diversity') return '/solutions/increase-diversity'
     if (item === 'Blog') return '/blog'
+    if (item === 'FAQ') return '/faq'
     return '#'
   }
 
