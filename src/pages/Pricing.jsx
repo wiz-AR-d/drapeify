@@ -9,14 +9,14 @@ export default function Pricing() {
         <div className="container">
           <h1 className="pricing-h1">Simple, transparent pricing</h1>
           <p className="pricing-subtitle">
-            Scale your fashion cataloging with photorealistic AI models. No studio coordination required.
+            Professional AI fashion cataloging done for you. We generate premium model photoshoots for your brand.
           </p>
 
           <div className="trial-banner">
             <div className="trial-badge">Free Trial</div>
             <div className="trial-content">
-              <h2>Try Drapeify for free</h2>
-              <p>Experience the quality of AI fashion model photoshoots with zero commitment.</p>
+              <h2>Get your free sample photoshoots</h2>
+              <p>Send us your product images, and our experts will generate high-quality AI photoshoots for free.</p>
               <div className="trial-features">
                 <div className="trial-feature-item">
                   <span className="feature-number">5</span>
@@ -31,7 +31,7 @@ export default function Pricing() {
             </div>
             <div className="trial-cta">
               <Link to="/contact" className="btn-primary dark">
-                Start Free Trial
+                Get Free Samples
               </Link>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Pricing() {
             <div className="plan-card">
               <div className="plan-header">
                 <h3 className="plan-title">Basic</h3>
-                <p className="plan-desc">Perfect for growing D2C brands starting with AI cataloging.</p>
+                <p className="plan-desc">Managed AI catalog photoshoots for growing D2C brands.</p>
                 <div className="plan-price-row">
                   <span className="plan-currency">₹</span>
                   <span className="plan-price">1,999</span>
@@ -56,31 +56,31 @@ export default function Pricing() {
               </div>
               <div className="plan-divider"></div>
               <div className="plan-body">
-                <p className="plan-features-title">What's included:</p>
+                <p className="plan-features-title">What we do for you:</p>
                 <ul className="plan-features-list">
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span><strong>5 SKUs</strong> (On-model photoshoots)</span>
+                    <span>Photoshoots generated for <strong>5 SKUs</strong></span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Access to standard model gallery</span>
+                    <span>Curated selection from our model gallery</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>High-resolution image downloads</span>
+                    <span>Up to 4 high-resolution angles per SKU</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Standard email customer support</span>
+                    <span>Retouching & quality assurance checks</span>
                   </li>
                 </ul>
               </div>
@@ -105,7 +105,7 @@ export default function Pricing() {
               </div>
               <div className="plan-divider"></div>
               <div className="plan-body">
-                <p className="plan-features-title">What's included:</p>
+                <p className="plan-features-title">What we do for you:</p>
                 <ul className="plan-features-list">
                   <li className="promo-feature">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
@@ -120,25 +120,25 @@ export default function Pricing() {
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span><strong>5 SKUs</strong> (Standard allowance)</span>
+                    <span>Photoshoots generated for <strong>5 SKUs</strong></span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span><strong>5 Videos</strong> (AI fashion clip generation)</span>
+                    <span><strong>5 Videos</strong> generated (AI fashion clips)</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Access to premium model gallery</span>
+                    <span>Access to premium models & custom backdrops</span>
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span>Priority 24/7 dedicated support</span>
+                    <span>Priority delivery & revisions included</span>
                   </li>
                 </ul>
               </div>
@@ -157,8 +157,8 @@ export default function Pricing() {
       <section className="pricing-enterprise">
         <div className="container">
           <div className="enterprise-box">
-            <h2>Need a custom solution or bulk SKU credits?</h2>
-            <p>We work with enterprise retailers, shoot studios, and large D2C labels to build customized AI models.</p>
+            <h2>Need large-scale catalog shoots?</h2>
+            <p>We partner with enterprise fashion brands to generate custom models and shoot catalogs at scale.</p>
             <Link to="/contact" className="btn-primary dark">
               Contact Sales
             </Link>
